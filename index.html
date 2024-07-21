@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name = "viewport" 
+            content="width=device-width, initial-scale=1.0" />
+        <title> Lance Portfolio </title>
+        <link rel="stylesheet" href="index.css" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/source" id="navbar__logo">
+                    <img src="images/pfp2-modified.png" alt="Logo">
+                </a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/source" class="navbar__links"> Home </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="projects.html" class="navbar__links"> Projects </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="resume.html" class="navbar__links"> Resume </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="contact.html" class="navbar__links"> Contact </a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="https://github.com/LancelotShih" class="button"> Github </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- enable for mouse parallax effect -->
+            <!-- <div id="parallax"><h1></h1></div> -->
+        </nav>
+        
+        <div class="main">
+            <div class="main__container">
+                <div class="main__content">
+                    <h1>Hi</h1>
+                    <h2>I'm Lance</h2>
+                    <p>Welcome to my website</p>
+                    <button class="main__btn"><a href="projects.html">Click here to see my projects!</a></button>
+                </div>
+                <div class="main__img--container">
+                    <img src="images/pfp2-modified.png" alt="Profile Picture" class="main__img"> 
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main__content">
+                <section class="about-me">
+                    <div class="about-me__content">
+                        <div id="typing-effect"></div>
+                        <script src="script.js"></script>
+                        <h2></h2>
+                        <p>I'm Lance, a tinkerer and engineer in the making at the University of Toronto. I have experience in embedded systems, PCB design, and backend development, and I'm interested in learning more about cybersecurity, internetworking, and ASIC design.</p>
+                        <h2></h2>
+                        <p>Wanna learn more or see what I've made? Head over to projects to see them</p>
+                    </div>
+                  </section>
+            </div>
+        </div>
+
+        <script src="index.js"> </script>
+    </body>
+</html>
