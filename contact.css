@@ -207,6 +207,13 @@
 
 /* Hero section CSS */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #141414; /* Set the same background color as the main content */
+}
+
 .main {
     background-color: #141414;
 }

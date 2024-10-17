@@ -319,10 +319,39 @@
     width: 100%;
 }
 
+/*  */
+.center-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: -80vh; /* Reduce height to 80% of viewport height */
+    margin-top: -350px; /* Add margin to further move the button down */
+}
+
+.main__btn2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.main__btn2 {
+    background-color: #000; /* Customize button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main__btn2:hover {
+    background-color: #333; /* Darken button on hover */
+}
+
 .main__img--container {
     position: relative;
     width: 715px;
-    height: 650px;
+    height: 715px;
     overflow: hidden;
 }
 
@@ -395,6 +424,23 @@
     opacity: 1;
 }
 
+.arrow {
+    position: absolute;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    bottom: 20px; /* Adjust this to position it vertically */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #f77062; 
+    cursor: pointer;
+}
+
+.main__container {
+    position: relative; /* Ensure the arrow is positioned relative to the container */
+}
 
 
 /* typing effect styling */

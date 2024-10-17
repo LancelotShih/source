@@ -33,6 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+window.addEventListener('scroll', function() {
+    var aboutMeSection = document.querySelector('.about-me__content');
+    var aboutMePosition = aboutMeSection.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.2;
+
+    if (aboutMePosition < screenPosition) {
+        aboutMeSection.classList.add('show');
+    }
+});
+
+
 
 
 // backspace effect lol
@@ -76,6 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     type();
+});
+
+document.getElementById('scroll-arrow').addEventListener('click', function() {
+    window.scrollBy({
+        top: 1000,  // Adjust this value to scroll more or less
+        behavior: 'smooth'
+    });
 });
 
 
