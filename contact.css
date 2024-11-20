@@ -268,6 +268,20 @@ html, body {
     animation: fadeIn 2.5s forwards 1.5s; /* Apply the fade-in animation */
 }
 
+.main__content h3{
+    font-size: 2rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    transition: all 0.45s;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    opacity: 0; /* Initially invisible */
+    animation: fadeIn 2.5s forwards 1.5s; /* Apply the fade-in animation */
+}
+
 .main__content p{
     margin-top: 1rem;
     font-size: 2rem;
