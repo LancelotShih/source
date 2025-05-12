@@ -465,7 +465,7 @@
     margin: 0 auto; /* Center horizontally */
     text-align: center; /* Center text horizontally */
     position: absolute;
-    top: 135%; /* Adjust as needed */
+    top: 130%; /* Adjust as needed */
     left: 50%; /* Adjust as needed */
     transform: translate(-50%, -50%); /* Center horizontally and vertically */
 }
