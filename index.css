@@ -34,6 +34,7 @@
     background-color: #77fdff;
     background-image: linear-gradient(to top, #0842ff 0%, #99ffec 100%);
     background-size: 100%;
+    background-clip: text; /* Standard property for compatibility */
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -444,7 +445,6 @@
 
 
 /* typing effect styling */
-
 #typing-effect {
     font-size: 3rem; /* Set the desired font size */
     white-space: nowrap; /* Ensure the text doesn't wrap */
