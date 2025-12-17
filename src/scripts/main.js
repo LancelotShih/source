@@ -14,6 +14,11 @@ class App {
             home: 'src/views/home.html',
             projects: 'src/views/projects.html',
             about: 'src/views/about.html',
+            // Project descriptions
+            'project-ecommerce': 'src/views/projectDescriptions/ecommerce.html',
+            'project-taskmanager': 'src/views/projectDescriptions/taskmanager.html',
+            'project-designsystem': 'src/views/projectDescriptions/designsystem.html',
+            // Add more as needed
         };
         this.init();
     }

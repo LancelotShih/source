@@ -39,6 +39,7 @@ h6 { font-size: var(--font-size-lg); }
 p {
     margin-bottom: var(--spacing-md);
     color: var(--color-white);
+    font-size: var(--font-size-lg);
 }
 
 a {
@@ -184,6 +185,15 @@ a:hover {
 .form-textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+/* Image Utilities */
+.about-me {
+    display: block;
+    margin: var(--spacing-lg) auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
 }
 
 /* Spacing Utilities */
