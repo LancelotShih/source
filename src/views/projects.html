@@ -2,7 +2,6 @@
 <section class="section" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
     <div class="container text-center">
         <h1 class="hero__title">My Projects</h1>
-        <p class="section__subtitle">Showcasing my best work and technical expertise</p>
     </div>
 </section>
 
@@ -11,9 +10,10 @@
     <div class="container">
         <div class="filter-tabs">
             <button class="filter-btn filter-btn--active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-            <button class="filter-btn" data-filter="design">UI/UX Design</button>
+            <button class="filter-btn" data-filter="Hardware">Hardware Design</button>
+            <button class="filter-btn" data-filter="Embedded">Embedded Systems</button>
+            <button class="filter-btn" data-filter="Software">Software Design</button>
+            <button class="filter-btn" data-filter="Misc">Miscellaneous Projects</button>
         </div>
     </div>
 </section>
@@ -22,133 +22,262 @@
 <section class="section">
     <div class="container">
         <div class="grid grid--projects">
-            <!-- Project 1 -->
-            <div class="card project-card" data-category="web">
-                <div class="project-card__image">
-                    <img src="assets/images/image1.png" alt="E-Commerce Platform">
-                </div>
-                <div class="project-card__content">
-                    <h3 class="project-card__title">E-Commerce Platform</h3>
-                    <p class="project-card__description">A full-stack e-commerce solution built with React and Node.js featuring real-time inventory management.</p>
-                    <div class="project-card__tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Node.js</span>
-                        <span class="project-tag">MongoDB</span>
-                    </div>
-                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-ecommerce')">View Project</button>
-                </div>
-            </div>
+            <!-- to insert new projects, simply CP the divider section and update the descriptions/specifics page -->
 
-            <!-- Project 2 -->
-            <div class="card project-card" data-category="web">
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Hardware Embedded">
                 <div class="project-card__image">
-                    <img src="assets/images/image2.png" alt="Task Management App">
+                    <img src="assets/images/image1.png" alt="Power Supply Control Board">
                 </div>
                 <div class="project-card__content">
-                    <h3 class="project-card__title">Task Management App</h3>
-                    <p class="project-card__description">A collaborative task management application with real-time updates and team collaboration features.</p>
+                    <h3 class="project-card__title">Power Supply Control Board
+                    </h3>
+                    <p class="project-card__description">A one stop solution to take any constant DC power supply and transforms 
+                        it into a dynamic programmable one.</p>
                     <div class="project-card__tags">
+                        <span class="project-tag">Python</span>
                         <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">Firebase</span>
-                        <span class="project-tag">CSS3</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">Docker</span>
                     </div>
-                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-taskmanager')">View Project</button>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-FinanceManager')">View Project</button>
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="card project-card" data-category="design">
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Software">
                 <div class="project-card__image">
-                    <img src="assets/images/image3.png" alt="UI Design System">
+                    <img src="assets/images/image1.png" alt="Finance Manager">
                 </div>
                 <div class="project-card__content">
-                    <h3 class="project-card__title">UI Design System</h3>
-                    <p class="project-card__description">A comprehensive design system with reusable components and typography guidelines.</p>
+                    <h3 class="project-card__title">Finance Manager</h3>
+                    <p class="project-card__description">A webapp that tracks your financial standings across all accounts and helps you 
+                        maintain good financial health.</p>
                     <div class="project-card__tags">
-                        <span class="project-tag">Figma</span>
-                        <span class="project-tag">Design</span>
-                        <span class="project-tag">UI/UX</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">Docker</span>
                     </div>
-                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-designsystem')">View Project</button>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-FinanceManager')">View Project</button>
                 </div>
             </div>
 
-            <!-- Project 4 -->
-            <div class="card project-card" data-category="mobile">
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Software">
                 <div class="project-card__image">
-                    <img src="assets/images/image4.png" alt="Fitness Tracker">
+                    <img src="assets/images/image2.png" alt="Wordle Solver">
                 </div>
                 <div class="project-card__content">
-                    <h3 class="project-card__title">Fitness Tracker App</h3>
-                    <p class="project-card__description">Native mobile application for tracking workouts with AI-powered recommendations.</p>
+                    <h3 class="project-card__title">Wordle Solver</h3>
+                    <p class="project-card__description">A basic python application that employs both a greedy solution and an entropic 
+                        solution to solve Wordle puzzles with optimal guesses.</p>
                     <div class="project-card__tags">
-                        <span class="project-tag">React Native</span>
-                        <span class="project-tag">Firebase</span>
-                        <span class="project-tag">ML</span>
+                        <span class="project-tag">Python</span>
                     </div>
-                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-fitnesstracker')">View Project</button>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-WordleSolver')">View Project</button>
                 </div>
             </div>
 
-            <!-- Project 5 -->
-            <div class="card project-card" data-category="web">
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Hardware">
                 <div class="project-card__image">
-                    <img src="assets/images/image5.png" alt="Analytics Dashboard">
+                    <img src="assets/images/image3.png" alt="SSB Demodulator">
                 </div>
                 <div class="project-card__content">
-                    <h3 class="project-card__title">Analytics Dashboard</h3>
-                    <p class="project-card__description">Real-time analytics dashboard with interactive charts and customizable reports.</p>
+                    <h3 class="project-card__title">SSB Demodulator</h3>
+                    <p class="project-card__description">Building a single sideband demodulator with a team as part of a hardware design course, 
+                        meant to integrate together to form a fully functioning radio transmitting/receiving in the 8-16 MHz (HF) band.</p>
+                    <div class="project-card__tags">
+                        <span class="project-tag">Altium</span>
+                        <span class="project-tag">Circuit Design</span>
+                        <span class="project-tag">SPICE Sim</span>
+                    </div>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-SSBDemodulator')">View Project</button>
+                </div>
+            </div>
+
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Software">
+                <div class="project-card__image">
+                    <img src="assets/images/image4.png" alt="Wake Up Joe">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Wake Up Joe</h3>
+                    <p class="project-card__description">An augmented reality voice powered morning routine experinece that assists in helping 
+                        you get dressed, make breakfast, and update you on today's events.</p>
+                    <div class="project-card__tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Qualcomm NPU SDK</span>
+                        <span class="project-tag">Android Development</span>
+                        <span class="project-tag">TensorFlow Lite</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">Java</span>
+                    </div>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-WakeUpJoe')">View Project</button>
+                </div>
+            </div>
+
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Embedded">
+                <div class="project-card__image">
+                    <img src="assets/images/image5.png" alt="Bing Pong">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Bing Pong</h3>
+                    <p class="project-card__description">A simple ping pong game implemented for the Nios II FPGA architecture. 
+                        The game allows a player to play against a computer by hitting a virtual ball 
+                        back and forth across the screen using paddles.</p>
                     <div class="project-card__tags">
                         <span class="project-tag">Vue.js</span>
                         <span class="project-tag">D3.js</span>
                         <span class="project-tag">API</span>
                     </div>
-                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-analytics')">View Project</button>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-BingPong')">View Project</button>
                 </div>
             </div>
 
-            <!-- Project 6 -->
-            <div class="card project-card" data-category="web">
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Hardware Embedded">
                 <div class="project-card__image">
-                    <img src="assets/images/image6.png" alt="Social Media Platform">
+                    <img src="assets/images/image6.png" alt="Farming Rover">
                 </div>
                 <div class="project-card__content">
-                    <h3 class="project-card__title">Social Media Platform</h3>
-                    <p class="project-card__description">Feature-rich platform with user authentication and real-time messaging capabilities.</p>
+                    <h3 class="project-card__title">Farming Rover</h3>
+                    <p class="project-card__description">A rover designed using various servo and hobby motors and remote 
+                        controlled using HTTP requests. Designed to pick up objects via remote control and return to home base after usage.</p>
                     <div class="project-card__tags">
                         <span class="project-tag">React</span>
                         <span class="project-tag">WebSocket</span>
                         <span class="project-tag">PostgreSQL</span>
                     </div>
-                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-socialmedia')">View Project</button>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-FarmingRover')">View Project</button>
                 </div>
             </div>
 
-            <!-- Project 7 -->
-            <div class="card project-card" data-category="design">
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Software">
                 <div class="project-card__image">
-                    <img src="assets/images/image7.png" alt="Brand Identity">
+                    <img src="assets/images/image7.png" alt="Synthetic AI Dataset Generator">
                 </div>
                 <div class="project-card__content">
-                    <h3 class="project-card__title">Brand Identity Package</h3>
-                    <p class="project-card__description">Complete brand identity design with logo, color palette, and brand guidelines.</p>
+                    <h3 class="project-card__title">Synthetic AI Dataset Generator</h3>
+                    <p class="project-card__description">A synthetic render that automatically traverses a 3D environment 
+                        and snaps images to auto-generate bounding boxes for all user-labeled objects for AI dataset generation without human input.</p>
                     <div class="project-card__tags">
-                        <span class="project-tag">Branding</span>
-                        <span class="project-tag">Design</span>
-                        <span class="project-tag">Illustration</span>
+                        <span class="project-tag">AI/ML</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Blender</span>
+                        <span class="project-tag">YOLOv8</span>
                     </div>
                     <button class="btn btn-small btn-primary" onclick="app.loadView('project-brandidentity')">View Project</button>
                 </div>
             </div>
 
-            <!-- Project 8 -->
-            <div class="card project-card" data-category="mobile">
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Hardware">
                 <div class="project-card__image">
-                    <img src="assets/images/image1.png" alt="Weather App">
+                    <img src="assets/images/image1.png" alt="BeagleBone Shield">
                 </div>
                 <div class="project-card__content">
-                    <h3 class="project-card__title">Weather Forecast App</h3>
-                    <p class="project-card__description">Mobile weather application with real-time forecasts, geolocation, and notifications.</p>
+                    <h3 class="project-card__title">BeagleBone Shield</h3>
+                    <p class="project-card__description">An interfacing PCB designed to conveniently connect various battery management signals 
+                        to a BeagleBone microcontroller running backend algorithm processing of the cell balancing. Signals include 
+                        CAN, ADC/SPI, GPIO control, and all default BeagleBone signals</p>
+                    <div class="project-card__tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">API</span>
+                        <span class="project-tag">GPS</span>
+                    </div>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-weather')">View Project</button>
+                </div>
+            </div>
+
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Hardware Embedded">
+                <div class="project-card__image">
+                    <img src="assets/images/image1.png" alt="Digital Thermometer">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Digital Thermometer</h3>
+                    <p class="project-card__description">A simple digital thermometer that utilizes a thermistor as a temperature 
+                        sensor in a voltage divider setup and calibrated on the Ardiuno to then send a calculated 
+                        temperature value to the LCD display.</p>
+                    <div class="project-card__tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">API</span>
+                        <span class="project-tag">GPS</span>
+                    </div>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-weather')">View Project</button>
+                </div>
+            </div>
+
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Software">
+                <div class="project-card__image">
+                    <img src="assets/images/image1.png" alt="Semiconductor Wafer Defect Detection System">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Semiconductor Wafer Defect Detection System</h3>
+                    <p class="project-card__description">A software pipeline designed to detect, mark, and count the number of defective 
+                        sectors via an 8K line scan of a semiconductor wafer. Done using OpenCV for image processing and edge detection.</p>
+                    <div class="project-card__tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">API</span>
+                        <span class="project-tag">GPS</span>
+                    </div>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-weather')">View Project</button>
+                </div>
+            </div>
+
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Software">
+                <div class="project-card__image">
+                    <img src="assets/images/image1.png" alt="Data Clean Room VM">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Data Clean Room VM</h3>
+                    <p class="project-card__description">A secure environment designed for sandboxing advertiser data to determine statistical 
+                        trends of a population that was advertised to. Encrypted data enters via a "handshake" between a service provider, 
+                        a "key master", and a user provider server(s).</p>
+                    <div class="project-card__tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">API</span>
+                        <span class="project-tag">GPS</span>
+                    </div>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-weather')">View Project</button>
+                </div>
+            </div>
+
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Hardware Embedded">
+                <div class="project-card__image">
+                    <img src="assets/images/image1.png" alt="Solar Vehicle Low Voltage System">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Solar Vehicle Low Voltage System</h3>
+                    <p class="project-card__description">Test bench set up for University of Toronto Solar Racing team with drive chain running. 
+                        6 Battery packs power a control board that is programmed to run the motor.</p>
+                    <div class="project-card__tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">API</span>
+                        <span class="project-tag">GPS</span>
+                    </div>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('project-weather')">View Project</button>
+                </div>
+            </div>
+
+            <!-- Project Div -->
+            <div class="card project-card" data-category="Misc">
+                <div class="project-card__image">
+                    <img src="assets/images/image1.png" alt="Private Tutoring">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Private Tutoring</h3>
+                    <p class="project-card__description">A tutoring startup designed to help students in mathematics from grades 1 to 10 in 
+                        various subjects such as mathematics, writing, SAT prep, AP prep and more.</p>
                     <div class="project-card__tags">
                         <span class="project-tag">Flutter</span>
                         <span class="project-tag">API</span>
@@ -158,14 +287,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="section" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));">
-    <div class="container text-center">
-        <h2 class="section__title">Ready to Start Your Project?</h2>
-        <p class="section__subtitle">Let's collaborate and bring your ideas to life</p>
-        <button class="btn btn-primary btn-large" onclick="app.loadView('home')">Get In Touch</button>
     </div>
 </section>

@@ -180,9 +180,9 @@ class App {
 
                 // Filter projects
                 projectCards.forEach((card) => {
-                    const category = card.getAttribute('data-category');
+                    const categories = card.getAttribute('data-category').split(' ');
 
-                    if (filter === 'all' || category === filter) {
+                    if (filter === 'all' || categories.includes(filter)) {
                         card.style.display = 'block';
                         setTimeout(() => {
                             card.classList.add('animate-fadeIn');
