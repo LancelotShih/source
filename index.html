@@ -1,94 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="icon" href="images\pfp2-modified.png" type="image/x-icon">
-        <meta charset="UTF-8" />
-        <meta name = "viewport" 
-            content="width=device-width, initial-scale=1.0" />
-        <title> Lance's Porfolio </title>
-        <link rel="stylesheet" href="index.css" type="text/css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lancelot Shih - Full-Stack Developer</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/styles/variables.css">
+    <link rel="stylesheet" href="src/styles/globals.css">
+    <link rel="stylesheet" href="src/styles/components/navbar.css">
+    <link rel="stylesheet" href="src/styles/components/hero.css">
+    <link rel="stylesheet" href="src/styles/components/cards.css">
+    <link rel="stylesheet" href="src/styles/components/forms.css">
+    <link rel="stylesheet" href="src/styles/layout/grid.css">
+    <link rel="stylesheet" href="src/styles/layout/responsive.css">
+</head>
+<body>
+    <!-- Root Container -->
+    <div id="app">
+        <!-- Navigation will be injected here -->
+        <div id="navbar-container"></div>
 
-    <body>
-        <nav class="navbar">
-            <div class="navbar__container">
-                <a href="/source" id="navbar__logo">
-                    <img src="images/pfp2-modified.png" alt="Logo">
-                </a>
-                <div class="navbar__toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a href="/source" class="navbar__links"> Home </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="projects.html" class="navbar__links"> Projects </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="experience.html" class="navbar__links"> Experience </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="contact.html" class="navbar__links"> Contact </a>
-                    </li>
-                    <li class="navbar__btn">
-                        <a href="https://github.com/LancelotShih" target="_blank" class="button"> Github </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- enable for mouse parallax effect -->
-            <!-- <div id="parallax"><h1></h1></div> -->
-        </nav>
-        
-        <div class="main">
-            <div class="main__container">
-                <div class="main__content">
-                    <h1>Hi</h1>
-                    <h2>I'm Lance</h2>
-                    <p>Welcome to my website</p>
-                    <button class="main__btn"><a href="projects.html">Click here to see my projects!</a></button>
-                </div>
-                <div class="main__img--container" style="display: flex; justify-content: center; align-items: center;">
-                    <div style="border-radius: 50%; overflow: hidden; width: 360px; height: 360px; display: flex; justify-content: center; align-items: center; background: linear-gradient(45deg, #ff7e5f, transparent); padding: 8px;">
-                        <img src="images/1720762405504.jpg" alt="Profile Picture" class="main__img" style="width: 132%; height: 102%; object-fit: cover; border-radius: 50%;">
-                    </div>
-                </div>
-                <!-- Add arrow element here -->
-                <div id="scroll-arrow" class="arrow"></div>
-            </div>
-        </div>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Views will be rendered here -->
+        </main>
 
-        <div class="main">
-            <div class="main__content">
-                <section class="about-me">
-                    <div class="about-me__content">
-                        <div id="typing-effect"></div>
-                        <script src="script.js"></script>
-                        <h2></h2>
-                        <p>I’m a Computer Engineering student at the University of Toronto with a passion for embedded systems, electronics design, and automation. </p>
-                        <h2></h2>
-                        <p>My work blends software and hardware, from writing low-level firmware and designing PCBs to developing full-stack control systems and AI powered automation tools. 
-                            I enjoy solving complex engineering problems and exploring how things work at both the micro and system levels.
-                            Outside of academics and work, I’m always learning, building, and experimenting with new technologies.</p>
-                        <h2></h2>
-                        <p>Wanna learn more or see what I've made? Head over to projects to see them!</p>
-                        <h2></h2>
-                    </div>
-                </section>
-                <div class="main__content" style="margin-top: 20px;"></div>
-                    <div class="center-button-container fade-in" id="button-fade">
-                        <button class="main__btn"><a href="projects.html">Click here to see my projects!</a></button>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
+        <!-- Footer will be injected here -->
+        <div id="footer-container"></div>
+    </div>
 
-        <script src="index.js"> </script>
-    </body>
+    <!-- Scripts -->
+    <script src="src/scripts/utils.js"></script>
+    <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/app.js"></script>
+</body>
 </html>

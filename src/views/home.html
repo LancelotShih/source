@@ -1,0 +1,164 @@
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero__container">
+        <div class="hero__content">
+            <h1 class="hero__title">Hi, I'm Lancelot Shih</h1>
+            <p class="hero__subtitle">Full-Stack Developer & Creative Problem Solver</p>
+            <p class="hero__description">Crafting innovative digital solutions and bringing ideas to life through code</p>
+            <div class="hero__cta">
+                <button class="btn btn-primary" onclick="app.loadView('projects')">View My Work</button>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero__image">
+            <img src="assets/images/1720762405504.jpg" alt="Lancelot Shih" class="hero__img">
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section section--light" id="about">
+    <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <div class="grid grid--2col">
+            <div>
+                <p>I'm a passionate developer with expertise in creating full-stack web applications. I combine technical skills with creative thinking to build solutions that are both functional and beautiful.</p>
+                <p>With experience in modern web technologies, I focus on writing clean, scalable code and delivering exceptional user experiences. I'm always eager to learn new technologies and take on challenging projects.</p>
+                <div class="skills">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">Web Design</span>
+                </div>
+            </div>
+            <div class="grid grid--2col">
+                <div class="card stat-card">
+                    <h3 class="stat-card__number">10+</h3>
+                    <p class="stat-card__label">Projects Completed</p>
+                </div>
+                <div class="card stat-card">
+                    <h3 class="stat-card__number">5+</h3>
+                    <p class="stat-card__label">Years Experience</p>
+                </div>
+                <div class="card stat-card">
+                    <h3 class="stat-card__number">100%</h3>
+                    <p class="stat-card__label">Dedication</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="section" id="featured-projects">
+    <div class="container">
+        <h2 class="section__title">Featured Projects</h2>
+        <div class="grid grid--3col">
+            <div class="card project-card">
+                <div class="project-card__image">
+                    <img src="assets/images/image1.png" alt="Project 1">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Project One</h3>
+                    <p class="project-card__description">A modern web application showcasing advanced features and innovative design patterns.</p>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('projects')">View Project</button>
+                </div>
+            </div>
+            <div class="card project-card">
+                <div class="project-card__image">
+                    <img src="assets/images/image2.png" alt="Project 2">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Project Two</h3>
+                    <p class="project-card__description">An innovative solution for real-world problems with scalable architecture.</p>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('projects')">View Project</button>
+                </div>
+            </div>
+            <div class="card project-card">
+                <div class="project-card__image">
+                    <img src="assets/images/image3.png" alt="Project 3">
+                </div>
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Project Three</h3>
+                    <p class="project-card__description">Cutting-edge technology implementation with focus on user experience.</p>
+                    <button class="btn btn-small btn-primary" onclick="app.loadView('projects')">View Project</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <button class="btn btn-primary btn-large" onclick="app.loadView('projects')">See All Projects</button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section section--gradient" id="contact">
+    <div class="container">
+        <h2 class="section__title">Get In Touch</h2>
+        <p class="section__subtitle">Let's work together to create something amazing</p>
+        <div class="grid grid--2col" style="margin-top: var(--spacing-2xl);">
+            <form class="form" id="contactForm">
+                <div class="form__group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required>
+                </div>
+                <div class="form__group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required>
+                </div>
+                <div class="form__group">
+                    <textarea id="message" name="message" placeholder="Your Message" class="form-textarea" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg); justify-content: center;">
+                <a href="mailto:your-email@example.com" class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
+                    📧 Email Me
+                </a>
+                <a href="#" class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
+                    💼 LinkedIn
+                </a>
+                <a href="#" class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
+                    🐙 GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Form submission handler
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+            };
+
+            const validation = App.FormHandler.validateForm(formData);
+            
+            if (!validation.isValid) {
+                Notification.error('Please check your form inputs');
+                return;
+            }
+
+            const btn = this.querySelector('button[type="submit"]');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            // Simulate submission
+            setTimeout(() => {
+                Notification.success('Message sent successfully!');
+                this.reset();
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+            }, 1500);
+        });
+    }
+});
+</script>
