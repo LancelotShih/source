@@ -165,7 +165,7 @@ a:hover {
     border: 2px solid var(--color-light-dark);
     border-radius: var(--radius-md);
     background-color: var(--color-light);
-    color: var(--color-white);
+    color: var (--color-white);
     transition: border-color var(--transition-fast), box-shadow var (--transition-fast);
 }
 
@@ -185,15 +185,6 @@ a:hover {
 .form-textarea {
     resize: vertical;
     min-height: 120px;
-}
-
-/* Image Utilities */
-.about-me {
-    display: block;
-    margin: var(--spacing-lg) auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--radius-lg);
 }
 
 /* Spacing Utilities */
