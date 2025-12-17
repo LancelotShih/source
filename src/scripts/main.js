@@ -15,10 +15,18 @@ class App {
             projects: 'src/views/projects.html',
             about: 'src/views/about.html',
             // Project descriptions
+            'project-FinanceManager': 'src/views/projectDescriptions/FinanceManager.html',
+            'project-PowerSupplyControlBoard': 'src/views/projectDescriptions/PowerSupplyControlBoard.html',
+            'project-ARMapsNavigator': 'src/views/projectDescriptions/ARMapsNavigator.html',
+            // Placeholder routes for other projects (create these files when ready)
             'project-ecommerce': 'src/views/projectDescriptions/ecommerce.html',
             'project-taskmanager': 'src/views/projectDescriptions/taskmanager.html',
             'project-designsystem': 'src/views/projectDescriptions/designsystem.html',
-            // Add more as needed
+            'project-fitnesstracker': 'src/views/projectDescriptions/fitnesstracker.html',
+            'project-analytics': 'src/views/projectDescriptions/analytics.html',
+            'project-socialmedia': 'src/views/projectDescriptions/socialmedia.html',
+            'project-brandidentity': 'src/views/projectDescriptions/brandidentity.html',
+            'project-weather': 'src/views/projectDescriptions/weather.html',
         };
         this.init();
     }

@@ -1,0 +1,76 @@
+<!-- Project Description: Finance Manager -->
+<section class="section">
+    <div class="container">
+        <!-- Back Button -->
+        <button class="btn btn-secondary" style="margin-bottom: var(--spacing-2xl);" onclick="app.loadView('projects')">← Back to Projects</button>
+
+        <!-- Project Header -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">AR Maps Navigator</h1>
+            <p class="section__subtitle">An innovative application designed to enhance navigation through augmented reality.</p>
+        </div>
+
+        <!-- Project Image -->
+        <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
+            <img src="assets/images/image1.png" alt="AR Maps Navigator" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Project Details Grid -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Overview -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
+                <p>An innovative application designed to enhance navigation through augmented reality.</p>
+                <p>The project demonstrates full-stack development capabilities, from backend API design to frontend user experience optimization.</p>
+            </div>
+
+            <!-- Key Features -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md);">✓ Real-time inventory tracking</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Secure payment integration</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ User authentication & profiles</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Product search & filtering</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Order tracking</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Admin dashboard</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Stripe API</span>
+                <span class="skill-tag">JWT Auth</span>
+            </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
+                <p>One of the main challenges was implementing real-time inventory updates across multiple concurrent users without race conditions.</p>
+            </div>
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Solutions</h3>
+                <p>I implemented database transaction handling and WebSocket connections to ensure data consistency and provide live inventory updates to all connected clients.</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
+            <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details or to discuss collaboration opportunities.</p>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+                <button class="btn btn-secondary" onclick="app.loadView('projects')">View More Projects</button>
+            </div>
+        </div>
+    </div>
+</section>
