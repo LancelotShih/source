@@ -20,34 +20,128 @@
             <!-- Overview -->
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
-                <p>This e-commerce platform is built with modern web technologies to provide a seamless shopping experience. It features real-time inventory management, secure payment processing, and an intuitive user interface.</p>
-                <p>The project demonstrates full-stack development capabilities, from backend API design to frontend user experience optimization.</p>
+                <p>This finance manager project was born out of being annoyed at the number of different financial accounts 
+                    I had to manually log into and check balances of. I wanted to create a centralized platform where I could
+                    load all assets balances and other financial data so I could get a better picture of what my current
+                    financial standing was, and where I should try to aim next.
+                </p>
+                <p>
+                    The webapp allows you to simply add, subtract, edit, and delete assets, equities, or cash you hold in each 
+                    financial account and it will automatically consolidate everything into one easy UI that depicts your 
+                    real time net worth and other useful financial metrics such as stock data and investment performance over time.
+                </p>
+                <p>
+                    It works on a classic full stack architecture with a React frontend, and then the FastAPI backend that stores all user 
+                    data into SQLite databases for persistent local storage. The backend also communicates with third party financial APIs to pull real time stock data
+                    to give users up to date information on their investments through libraries like yfinance. This architecture also allows for future mobile
+                    app expansion as the backend can easily service multiple frontends.
+                </p>
             </div>
 
             <!-- Key Features -->
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: var(--spacing-md);">✓ Real-time inventory tracking</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Secure payment integration</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ User authentication & profiles</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Product search & filtering</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Order tracking</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Admin dashboard</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Real-time stock data</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Equities, assets, and cash management</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Organization by account type</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Retirement asset tracking</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Overall net worth tracking</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Tech Stack -->
-        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+         <!-- Tech Stack -->
+         <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
             <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Express</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Stripe API</span>
-                <span class="skill-tag">JWT Auth</span>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- Python - 40% -->
+                    <div style="width: 40%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #6366f1, #818cf8); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Python - 40%">40%
+                    </div>
+
+                    <!-- JavaScript - 35% -->
+                    <div style="width: 35%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #06b6d4, #22d3ee); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="JavaScript - 35%">35%
+                    </div>
+                    
+                    <!-- HTML - 10% -->
+                    <div style="width: 10%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="HTML - 10%">10%
+                    </div>
+                    
+                    <!-- CSS - 10% -->
+                    <div style="width: 10%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #ec4899, #f472b6); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="CSS - 10%">10%
+                    </div>
+
+                    <!-- Docker - 5% -->
+                    <div style="width: 10%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #10b981, #34d399); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Docker - 5%">5%
+                    </div>
+                    
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Python</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">JavaScript</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">HTML</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #ec4899, #f472b6); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">CSS</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #10b981, #34d399); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Docker</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -55,20 +149,33 @@
         <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
             <div>
                 <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
-                <p>One of the main challenges was implementing real-time inventory updates across multiple concurrent users without race conditions.</p>
-            </div>
-            <div>
-                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Solutions</h3>
-                <p>I implemented database transaction handling and WebSocket connections to ensure data consistency and provide live inventory updates to all connected clients.</p>
+                <p>
+                    One of the main challenges was to figure out what exactly I wanted to track. There are so many 
+                    different financial measurements to track and so many of them overlap that I needed to really 
+                    think about and track what was relevant to a net worth calculator dashboard.
+                </p>
+                <p>
+                    So to start I began with the things that build up my own net worth, things like my stock portfolios, 
+                    my 401k, my ROTH accounts, my cash accounts, and my US Treasuries. All of these combined make up my net worth,
+                    so I focused on building out features to track these first before expanding to other financial metrics.
+                </p>
+                <p>
+                    As such you will find that things like price data and history of equities that exist in my portfolio are tracked, 
+                    but things like debt tracking or credit score tracking are not initially implemented as they do not directly affect net worth.
+                </p>
+                <p>
+                    Additionally, I plan to incorporate features for tracking expenses and income and possibly using 
+                    AI summarization and suggestions in future updates to provide a more comprehensive financial overview.
+                </p>
             </div>
         </div>
 
         <!-- CTA Section -->
         <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
             <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
-            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details or to discuss collaboration opportunities.</p>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
             <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
-                <button class="btn btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
                 <button class="btn btn-secondary" onclick="app.loadView('projects')">View More Projects</button>
             </div>
         </div>
