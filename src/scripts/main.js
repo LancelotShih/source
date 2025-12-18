@@ -98,6 +98,10 @@ class App {
             this.initializeProjectsView();
         }
         
+        if (viewName === 'about') {
+            this.initializeAboutView();
+        }
+        
         // Update active navigation link
         this.updateActiveNavLink(viewName);
         
@@ -196,6 +200,20 @@ class App {
                 });
             });
         });
+    }
+
+    /**
+     * Initialize about view functionality
+     */
+    initializeAboutView() {
+        // The timeline script in about.html will execute, but we need to ensure
+        // the functions are called after the DOM is ready
+        setTimeout(() => {
+            if (typeof renderTimeline === 'function' && typeof timelineEvents !== 'undefined') {
+                renderTimeline(timelineEvents);
+                setupFilterButtons();
+            }
+        }, 100);
     }
 
     /**

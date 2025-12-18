@@ -1,172 +1,210 @@
-<!-- About Header -->
-<section class="section" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
-    <div class="container text-center">
-        <h1 class="hero__title">About Me</h1>
-        <p class="section__subtitle">Learn more about my journey and expertise</p>
-    </div>
-</section>
-
-<!-- Main About Content -->
-<section class="section section--light">
-    <div class="container">
-        <div class="grid grid--2col" style="gap: var(--spacing-4xl);">
-            <div>
-                <h2>Who I Am</h2>
-                <p>I'm Lancelot Shih, a passionate full-stack developer with a deep love for creating elegant solutions to complex problems. With over 5 years of experience in web and mobile development, I've had the privilege of working on diverse projects that have shaped my skills and perspective.</p>
-                <p>My journey in tech started with a curiosity about how things work, which evolved into a career dedicated to building scalable, user-centered applications. I believe in continuous learning and staying updated with the latest technologies and best practices.</p>
-                <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers in the community.</p>
-            </div>
-            <div>
-                <h2>My Approach</h2>
-                <p><strong>User-Centric Design:</strong> I prioritize the end-user experience in every project, ensuring that functionality meets aesthetic excellence.</p>
-                <p><strong>Clean Code:</strong> I write maintainable, well-documented code that follows industry best practices and design patterns.</p>
-                <p><strong>Problem Solving:</strong> I approach challenges analytically, breaking them down into manageable components and finding innovative solutions.</p>
-                <p><strong>Collaboration:</strong> I work effectively in teams, communicate clearly, and believe in the power of diverse perspectives.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Skills Section -->
+<!-- Professional Timeline Page -->
 <section class="section">
     <div class="container">
-        <h2 class="section__title">Technical Skills</h2>
-        <div class="grid grid--2col">
-            <div>
-                <h3>Frontend</h3>
-                <div class="skills" style="margin-top: var(--spacing-lg);">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Vue.js</span>
-                    <span class="skill-tag">Responsive Design</span>
+        <!-- Page Header -->
+        <div style="margin-bottom: var(--spacing-3xl); text-align: center;">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">My Professional Journey</h1>
+            <p class="section__subtitle">A timeline of my education, work experience, and research endeavors showing overlapping experiences</p>
+        </div>
+
+        <!-- Timeline Controls -->
+        <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-3xl); justify-content: center; flex-wrap: wrap;">
+            <button class="timeline-filter" data-filter="all" onclick="filterTimeline('all')" style="background-color: var(--color-primary); color: white; border: none; padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: bold; transition: all var(--transition-base);">All Events</button>
+            <button class="timeline-filter" data-filter="education" onclick="filterTimeline('education')" style="background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: bold; transition: all var(--transition-base);">Education</button>
+            <button class="timeline-filter" data-filter="work" onclick="filterTimeline('work')" style="background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: bold; transition: all var(--transition-base);">Work</button>
+            <button class="timeline-filter" data-filter="research" onclick="filterTimeline('research')" style="background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: bold; transition: all var(--transition-base);">Research</button>
+        </div>
+
+        <!-- Main Timeline Container -->
+        <div style="position: relative; padding: var(--spacing-2xl) 0; max-width: 1100px; margin: 0 auto;">
+            <!-- Timeline Central Line -->
+            <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--color-primary), var(--color-secondary)); transform: translateX(-50%);"></div>
+
+            <!-- Timeline Items -->
+            <div id="timeline-container" style="position: relative;">
+                
+                <!-- 2019-2024: UNIVERSITY (Main Event) -->
+                <div class="timeline-item timeline-item--left" data-category="education" style="display: flex; flex-direction: row; align-items: flex-start; gap: var(--spacing-lg); margin-bottom: var(--spacing-3xl); text-align: right;">
+                    <div style="position: relative; display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
+                        <div style="width: 24px; height: 24px; border-radius: 50%; background-color: #06b6d4; border: 5px solid var(--color-dark); box-shadow: 0 0 0 4px #06b6d440;"></div>
+                    </div>
+                    <div style="flex: 1; max-width: 450px;">
+                        <div style="background-color: var(--color-light); border-radius: var(--radius-lg); padding: var(--spacing-lg); border-left: 5px solid #06b6d4; box-shadow: var(--shadow-md);">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-md); gap: var(--spacing-md);">
+                                <div>
+                                    <h3 style="margin: 0; color: var(--color-white); font-size: var(--font-size-xl); font-weight: bold;">University - Computer Engineering</h3>
+                                    <p style="margin: var(--spacing-xs) 0 0 0; color: var(--color-gray); font-size: var(--font-size-sm);">2022-2027</p>
+                                </div>
+                                <div style="background-color: #06b6d420; color: #06b6d4; padding: 6px 14px; border-radius: var(--radius-sm); font-size: var(--font-size-xs); font-weight: bold; white-space: nowrap; flex-shrink: 0;">5 years</div>
+                            </div>
+                            <p style="margin: var(--spacing-md) 0; color: var(--color-gray); line-height: 1.6;">Bachelor's degree in Computer Engineering with focus on embedded systems and software.</p>
+                            <ul style="list-style: none; padding: 0; margin: var(--spacing-md) 0 0 0;">
+                                <li style="color: var(--color-gray); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">• Relevant Coursework: Embedded Systems, Real-Time Operating Systems, Digital Signal Processing</li>
+                            </ul>
+                            
+                            <!-- NESTED: Overlapping Events During University -->
+                            <div style="margin-top: var(--spacing-2xl); padding-top: var(--spacing-2xl); border-top: 1px solid var(--color-light-dark);">
+                                <p style="color: var(--color-primary); font-size: var(--font-size-xs); font-weight: bold; text-transform: uppercase; margin: 0 0 var(--spacing-lg) 0;">Concurrent Experiences During University:</p>
+                                
+                                <!-- Nested Item 1: Club 2022 -->
+                                <div style="display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-lg); padding-left: var(--spacing-lg); border-left: 3px solid #8b5cf6;">
+                                    <div style="flex-shrink: 0; margin-top: 4px;">
+                                        <div style="width: 14px; height: 14px; border-radius: 50%; background-color: #8b5cf6;"></div>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--color-white); font-size: var(--font-size-base);">University of Toronto Solar Racing Team</h4>
+                                        <p style="margin: 0 0 var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm);">Sep 2022 - July 2025 • 2 yrs 10 months</p>
+                                        <p style="margin: var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm); line-height: 1.5;">Vehicle low voltage system design</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Nested Item 2: Research 2024 -->
+                                <div style="display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-lg); padding-left: var(--spacing-lg); border-left: 3px solid #10b981;">
+                                    <div style="flex-shrink: 0; margin-top: 4px;">
+                                        <div style="width: 14px; height: 14px; border-radius: 50%; background-color: #10b981;"></div>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--color-white); font-size: var(--font-size-base);">Summer Resarch Student - University of Toronto Electric Vehicle Labs</h4>
+                                        <p style="margin: 0 0 var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm);">May - Aug 2024 • 4 months</p>
+                                        <p style="margin: var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm); line-height: 1.5;">PCB Design and BMS development of multichemistry battery systems</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Nested Item 3: Work 2025 -->
+                                <div style="display: flex; gap: var(--spacing-md); padding-left: var(--spacing-lg); border-left: 3px solid #8b5cf6;">
+                                    <div style="flex-shrink: 0; margin-top: 4px;">
+                                        <div style="width: 14px; height: 14px; border-radius: 50%; background-color: #8b5cf6;"></div>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--color-white); font-size: var(--font-size-base);">Electronics and Firmware Design Intern - Tesla</h4>
+                                        <p style="margin: 0 0 var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm);">Jan - Dec 2025 • 12 months</p>
+                                        <p style="margin: var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm); line-height: 1.5;">Designed and tested embedded control systems using Altium and C/C++</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 2022-2024: RESEARCH PROJECT (Main Event) -->
+                <!-- <div class="timeline-item timeline-item--right" data-category="research" style="display: flex; flex-direction: row-reverse; align-items: flex-start; gap: var(--spacing-lg); margin-bottom: var(--spacing-3xl); text-align: left;">
+                    <div style="position: relative; display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
+                        <div style="width: 24px; height: 24px; border-radius: 50%; background-color: #10b981; border: 5px solid var(--color-dark); box-shadow: 0 0 0 4px #10b98140;"></div>
+                    </div>
+                    <div style="flex: 1; max-width: 450px;">
+                        <div style="background-color: var(--color-light); border-radius: var(--radius-lg); padding: var(--spacing-lg); border-left: 5px solid #10b981; box-shadow: var(--shadow-md);">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-md); gap: var(--spacing-md);">
+                                <div>
+                                    <h3 style="margin: 0; color: var(--color-white); font-size: var(--font-size-xl); font-weight: bold;">Power Supply Control Board Project</h3>
+                                    <p style="margin: var(--spacing-xs) 0 0 0; color: var(--color-gray); font-size: var(--font-size-sm);">2022-2024</p>
+                                </div>
+                                <div style="background-color: #10b98120; color: #10b981; padding: 6px 14px; border-radius: var(--radius-sm); font-size: var(--font-size-xs); font-weight: bold; white-space: nowrap; flex-shrink: 0;">20 months</div>
+                            </div>
+                            <p style="margin: var(--spacing-md) 0; color: var(--color-gray); line-height: 1.6;">Personal research project: Programmable power supply with TCP/IP control.</p>
+                            <ul style="list-style: none; padding: 0; margin: var(--spacing-md) 0 0 0;">
+                                <li style="color: var(--color-gray); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">• Full-stack embedded systems project</li>
+                                <li style="color: var(--color-gray); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">• RTOS implementation with multithreaded processing</li>
+                                <li style="color: var(--color-gray); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">• Protocol buffer communication over TCP/IP</li>
+                                <li style="color: var(--color-gray); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">• Ongoing project with multiple revisions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- 2023-2024: WORK (Overlaps with University End) -->
+                <!-- <div class="timeline-item timeline-item--left" data-category="work" style="display: flex; flex-direction: row; align-items: flex-start; gap: var(--spacing-lg); margin-bottom: var(--spacing-2xl); text-align: right;">
+                    <div style="position: relative; display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #8b5cf6; border: 4px solid var(--color-dark); box-shadow: 0 0 0 4px #8b5cf640;"></div>
+                    </div>
+                    <div style="flex: 1; max-width: 400px;">
+                        <div style="background-color: var(--color-light); border-radius: var(--radius-lg); padding: var(--spacing-lg); border-left: 4px solid #8b5cf6; box-shadow: var(--shadow-md);">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-sm); gap: var(--spacing-md);">
+                                <div>
+                                    <h3 style="margin: 0; color: var(--color-white); font-size: var(--font-size-lg);">Full-Stack Developer - StartupXYZ</h3>
+                                    <p style="margin: var(--spacing-xs) 0 0 0; color: var(--color-gray); font-size: var(--font-size-sm);">2023-2024</p>
+                                </div>
+                                <div style="background-color: #8b5cf620; color: #8b5cf6; padding: 4px 12px; border-radius: var(--radius-sm); font-size: var(--font-size-xs); font-weight: bold; white-space: nowrap; flex-shrink: 0;">1.5 years</div>
+                            </div>
+                            <p style="margin: var(--spacing-md) 0; color: var(--color-gray); line-height: 1.6;">Led development of web applications with focus on performance and scalability.</p>
+                            <ul style="list-style: none; padding: 0; margin: var(--spacing-md) 0 0 0;">
+                                <li style="color: var(--color-gray); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">• Full-stack development using React and Node.js</li>
+                                <li style="color: var(--color-gray); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">• Architected microservices for scalable backend</li>
+                                <li style="color: var(--color-gray); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">• Mentored junior developers on best practices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
             </div>
-            <div>
-                <h3>Backend</h3>
-                <div class="skills" style="margin-top: var(--spacing-lg);">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">RESTful APIs</span>
-                    <span class="skill-tag">Firebase</span>
-                </div>
+        </div>
+
+        <!-- Legend -->
+        <div style="display: flex; justify-content: center; gap: var(--spacing-2xl); flex-wrap: wrap; margin-top: var(--spacing-3xl); padding-top: var(--spacing-3xl); border-top: 1px solid var(--color-light-dark);">
+            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #06b6d4;"></div>
+                <span style="color: var(--color-gray);">Education</span>
             </div>
-            <div>
-                <h3>Tools & Platforms</h3>
-                <div class="skills" style="margin-top: var(--spacing-lg);">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Figma</span>
-                    <span class="skill-tag">VS Code</span>
-                </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #8b5cf6;"></div>
+                <span style="color: var(--color-gray);">Work Experience</span>
             </div>
-            <div>
-                <h3>Other</h3>
-                <div class="skills" style="margin-top: var(--spacing-lg);">
-                    <span class="skill-tag">UI/UX Design</span>
-                    <span class="skill-tag">Web Performance</span>
-                    <span class="skill-tag">Agile</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Team Leadership</span>
-                    <span class="skill-tag">Technical Writing</span>
-                </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #10b981;"></div>
+                <span style="color: var(--color-gray);">Research</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Experience & Education -->
-<section class="section section--light">
-    <div class="container">
-        <h2 class="section__title">Experience & Education</h2>
-        <div class="grid grid--2col" style="gap: var(--spacing-3xl);">
-            <div>
-                <h3>Experience</h3>
-                <div style="margin-top: var(--spacing-2xl);">
-                    <div style="margin-bottom: var(--spacing-2xl);">
-                        <h4>Senior Full-Stack Developer</h4>
-                        <p class="text-muted">Tech Company XYZ • 2021 - Present</p>
-                        <p>Led development of multiple full-stack applications, mentored junior developers, and improved application performance by 40%.</p>
-                    </div>
-                    <div style="margin-bottom: var(--spacing-2xl);">
-                        <h4>Full-Stack Developer</h4>
-                        <p class="text-muted">Digital Agency ABC • 2019 - 2021</p>
-                        <p>Developed responsive web applications, collaborated with designers and project managers to deliver high-quality solutions.</p>
-                    </div>
-                    <div>
-                        <h4>Junior Web Developer</h4>
-                        <p class="text-muted">Startup DEF • 2018 - 2019</p>
-                        <p>Built and maintained company website, implemented new features, and optimized frontend performance.</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h3>Education</h3>
-                <div style="margin-top: var(--spacing-2xl);">
-                    <div style="margin-bottom: var(--spacing-2xl);">
-                        <h4>Bachelor of Science in Computer Science</h4>
-                        <p class="text-muted">University Name • Graduated 2018</p>
-                        <p>Focused on web development, software engineering, and data structures.</p>
-                    </div>
-                    <div style="margin-bottom: var(--spacing-2xl);">
-                        <h4>Full Stack Web Development Bootcamp</h4>
-                        <p class="text-muted">Coding Academy • Completed 2018</p>
-                        <p>Intensive program covering modern web development technologies and best practices.</p>
-                    </div>
-                    <div>
-                        <h4>Certifications</h4>
-                        <p class="text-muted">Various Online Platforms</p>
-                        <p>AWS Certified Solutions Architect, Google Cloud Professional, React Advanced Patterns</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<script>
+function filterTimeline(category) {
+    const mainItems = document.querySelectorAll('.timeline-item');
+    const buttons = document.querySelectorAll('.timeline-filter');
+    
+    // Update button styles
+    buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+            btn.style.backgroundColor = 'var(--color-primary)';
+            btn.style.color = 'white';
+            btn.style.border = '2px solid var(--color-primary)';
+        } else {
+            btn.style.backgroundColor = 'transparent';
+            btn.style.color = 'var(--color-primary)';
+            btn.style.border = '2px solid var(--color-primary)';
+        }
+    });
+    
+    // Show/hide items
+    mainItems.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+            item.style.display = 'flex';
+            item.style.animation = 'fadeIn 0.3s ease-out';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+</script>
 
-<!-- Stats Section -->
-<section class="section">
-    <div class="container">
-        <h2 class="section__title">By The Numbers</h2>
-        <div class="grid grid--3col">
-            <div class="card stat-card">
-                <h3 class="stat-card__number">10+</h3>
-                <p class="stat-card__label">Projects Completed</p>
-            </div>
-            <div class="card stat-card">
-                <h3 class="stat-card__number">5+</h3>
-                <p class="stat-card__label">Years of Experience</p>
-            </div>
-            <div class="card stat-card">
-                <h3 class="stat-card__number">50+</h3>
-                <p class="stat-card__label">Happy Clients</p>
-            </div>
-            <div class="card stat-card">
-                <h3 class="stat-card__number">100+</h3>
-                <p class="stat-card__label">Code Commits</p>
-            </div>
-            <div class="card stat-card">
-                <h3 class="stat-card__number">20+</h3>
-                <p class="stat-card__label">Technologies</p>
-            </div>
-            <div class="card stat-card">
-                <h3 class="stat-card__number">100%</h3>
-                <p class="stat-card__label">Dedication</p>
-            </div>
-        </div>
-    </div>
-</section>
+<style>
+.timeline-item {
+    animation: fadeIn 0.5s ease-out;
+}
 
-<!-- CTA Section -->
-<section class="section section--gradient">
-    <div class="container text-center">
-        <h2 class="section__title">Let's Work Together</h2>
-        <p class="section__subtitle">Ready to bring your next project to life?</p>
-        <button class="btn btn-primary btn-large" onclick="app.loadView('home')">Get In Touch</button>
-    </div>
-</section>
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: row !important;
+    }
+}
+</style>
