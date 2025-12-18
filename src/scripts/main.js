@@ -236,6 +236,107 @@ class App {
             }
         });
     }
+
+    /**
+     * Open gallery modal with image
+     */
+    openGalleryModal(imageSrc, imageTitle) {
+        let modal = document.getElementById('gallery-modal');
+        
+        // Create modal if it doesn't exist
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'gallery-modal';
+            modal.className = 'gallery-modal';
+            modal.innerHTML = `
+                <div class="gallery-modal__backdrop" onclick="app.closeGalleryModal()"></div>
+                <div class="gallery-modal__content">
+                    <button class="gallery-modal__close" onclick="app.closeGalleryModal()">✕</button>
+                    <button class="gallery-modal__nav gallery-modal__nav--prev" onclick="app.navigateGallery(-1)" style="display: none;">❮</button>
+                    <img id="gallery-modal-img" src="" alt="" class="gallery-modal__image">
+                    <button class="gallery-modal__nav gallery-modal__nav--next" onclick="app.navigateGallery(1)" style="display: none;">❯</button>
+                    <p id="gallery-modal-title" class="gallery-modal__title"></p>
+                    <p id="gallery-modal-counter" class="gallery-modal__counter" style="display: none;"></p>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            // Add keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (modal.classList.contains('active')) {
+                    if (e.key === 'ArrowLeft') app.navigateGallery(-1);
+                    if (e.key === 'ArrowRight') app.navigateGallery(1);
+                    if (e.key === 'Escape') app.closeGalleryModal();
+                }
+            });
+        }
+        
+        // Store current gallery context
+        const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+        const currentIndex = galleryItems.findIndex(item => {
+            const itemSrc = item.querySelector('img').src;
+            return itemSrc.includes(imageSrc.split('/').pop());
+        });
+        
+        this.galleryState = {
+            items: galleryItems.map(item => ({
+                src: item.querySelector('img').src,
+                title: item.querySelector('img').alt
+            })),
+            currentIndex: currentIndex >= 0 ? currentIndex : 0
+        };
+        
+        // Update modal display
+        this.updateGalleryModal();
+        
+        // Show modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    /**
+     * Update gallery modal with current image
+     */
+    updateGalleryModal() {
+        const state = this.galleryState;
+        const currentItem = state.items[state.currentIndex];
+        
+        document.getElementById('gallery-modal-img').src = currentItem.src;
+        document.getElementById('gallery-modal-img').alt = currentItem.title;
+        document.getElementById('gallery-modal-title').textContent = currentItem.title;
+        
+        // Update counter
+        if (state.items.length > 1) {
+            document.getElementById('gallery-modal-counter').textContent = 
+                `${state.currentIndex + 1} / ${state.items.length}`;
+            document.getElementById('gallery-modal-counter').style.display = 'block';
+            document.querySelector('.gallery-modal__nav--prev').style.display = 'block';
+            document.querySelector('.gallery-modal__nav--next').style.display = 'block';
+        }
+    }
+
+    /**
+     * Navigate through gallery images
+     */
+    navigateGallery(direction) {
+        if (!this.galleryState) return;
+        
+        const totalItems = this.galleryState.items.length;
+        this.galleryState.currentIndex = (this.galleryState.currentIndex + direction + totalItems) % totalItems;
+        
+        this.updateGalleryModal();
+    }
+
+    /**
+     * Close gallery modal
+     */
+    closeGalleryModal() {
+        const modal = document.getElementById('gallery-modal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
 }
 
 // Initialize app when DOM is ready
