@@ -1,4 +1,4 @@
-<!-- Project Description: Finance Manager -->
+<!-- Project Description: Power Supply Control Board -->
 <section class="section">
     <div class="container">
         <!-- Back Button -->
@@ -20,20 +20,26 @@
             <!-- Overview -->
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
-                <p>A one stop solution to take any constant DC power supply and transform it into a dynamic programmable one.</p>
-                <p>The project demonstrates full-stack development capabilities, from backend API design to frontend user experience optimization.</p>
+                <p>Designed out of a need to standardize power supply control for various applications, this project allows you to take a normal DC power supply that
+                    can be cheap and easily obtained, and attach it to a control board to it and turn it into a programmable power supply with dynamic voltage and current settings.</p>
+                </p>
+                <p>It utilizes a buck converter with a variable feedback resistor setup to adjust the output voltage, and communicates to client devices over TCP/IP under a 
+                    standardized protocol buffer schema for easy integration into existing systems, as well as allows users to create new libraries in different languages.</p>
+                <p>The board also sports the ability to do overcurrent and overvoltage protection, accurate ADC measurement of outputs and inputs, 
+                    and features a user-friendly interface for initial setup configuration and firmware flashing.</p>
             </div>
 
             <!-- Key Features -->
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: var(--spacing-md);">✓ Real-time inventory tracking</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Secure payment integration</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ User authentication & profiles</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Product search & filtering</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Order tracking</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Admin dashboard</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Programmable Output Voltage</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ High Accuracy ADC Input Output Measurements</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ TCP/IP Protocol Buffered Communication</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ RTOS Implementation</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Multithreaded Processing</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Constant OCP OVP Safety Tracking</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ User-Friendly Flashing</li>
                 </ul>
             </div>
         </div>
@@ -41,13 +47,110 @@
         <!-- Tech Stack -->
         <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
             <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Express</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Stripe API</span>
-                <span class="skill-tag">JWT Auth</span>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- C/C++ - 40% -->
+                    <div style="width: 40%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #6366f1, #818cf8); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="C/C++ - 40%">40%
+                    </div>
+
+                    <!-- ARM/Embedded - 25% -->
+                    <div style="width: 25%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #06b6d4, #22d3ee); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="ARM/Embedded - 25%">25%
+                    </div>
+                    
+                    <!-- Python - 10% -->
+                    <div style="width: 10%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Python - 10%">10%
+                    </div>
+                    
+                    <!-- GoLang - 10% -->
+                    <div style="width: 10%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #ec4899, #f472b6); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="GoLang - 10%">10%
+                    </div>
+
+                    <!-- Altium - 10% -->
+                    <div style="width: 10%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #10b981, #34d399); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Altium - 10%">10%
+                    </div>
+
+                    <!-- STM32 - 5% -->
+                    <div style="width: 5%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #f59e0b, #fbbf24); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="STM32 - 5%">5%
+                    </div>
+                    
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">C/C++</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">ARM/Embedded</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Python</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #ec4899, #f472b6); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">GoLang</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #10b981, #34d399); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Altium</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #f59e0b, #fbbf24); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">STM32</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -55,20 +158,31 @@
         <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
             <div>
                 <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
-                <p>One of the main challenges was implementing real-time inventory updates across multiple concurrent users without race conditions.</p>
-            </div>
-            <div>
-                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Solutions</h3>
-                <p>I implemented database transaction handling and WebSocket connections to ensure data consistency and provide live inventory updates to all connected clients.</p>
+                <p>One of the main challenges was making sure the board didn't simply just explode on operation. Having to do constant safety testing and
+                    defining the limits of the board through the firmware was crucial to make sure that users could not break the board even if they tried.
+                </p>
+                <p>
+                    Another challenge was implementing a reliable TCP/IP communication protocol that could handle multiple clients and ensure data consistency.
+                    Originally, the flash size of the microcontroller was limited, so in recent revisions of the project, a more powerful microcontroller was
+                    selected, which now meant upgrades to the network stack allow for more robust handling of incoming connections.
+                </p>
+                <p>
+                    Last but not least, using ARM Microcontrollers under an RTOS environment meant that multithreaded processing had to be carefully managed
+                    as well as MPU configs or memory allocation to prevent leaks and crashes during long term operation. Mishandling these elements would cause the MCU to 
+                    crash without warning or simply not start up at all.
+                </p>
+                <p>
+                    Additionally, implementing robust error handling and logging mechanisms was essential to diagnose issues during development and deployment.
+                </p>
             </div>
         </div>
 
         <!-- CTA Section -->
         <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
             <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
-            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details or to discuss collaboration opportunities.</p>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
             <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
-                <button class="btn btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
                 <button class="btn btn-secondary" onclick="app.loadView('projects')">View More Projects</button>
             </div>
         </div>

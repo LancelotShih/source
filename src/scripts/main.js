@@ -168,7 +168,8 @@ class App {
      */
     initializeProjectsView() {
         const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+        const grid = document.querySelector('.grid--projects');
+        const projectCards = Array.from(document.querySelectorAll('.project-card'));
 
         filterBtns.forEach((btn) => {
             btn.addEventListener('click', () => {
@@ -178,19 +179,20 @@ class App {
                 filterBtns.forEach((b) => b.classList.remove('filter-btn--active'));
                 btn.classList.add('filter-btn--active');
 
-                // Filter projects
-                projectCards.forEach((card) => {
+                // Filter and reflow projects
+                const visibleCards = projectCards.filter((card) => {
                     const categories = card.getAttribute('data-category').split(' ');
+                    return filter === 'all' || categories.includes(filter);
+                });
 
-                    if (filter === 'all' || categories.includes(filter)) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.classList.add('animate-fadeIn');
-                        }, 10);
-                    } else {
-                        card.style.display = 'none';
-                        card.classList.remove('animate-fadeIn');
-                    }
+                // Clear the grid
+                grid.innerHTML = '';
+
+                // Reinsert visible cards to force recalculation
+                visibleCards.forEach((card) => {
+                    const clonedCard = card.cloneNode(true);
+                    clonedCard.classList.add('animate-fadeIn');
+                    grid.appendChild(clonedCard);
                 });
             });
         });
