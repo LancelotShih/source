@@ -1,0 +1,185 @@
+<!-- Project Description: Wordle Solver -->
+<section class="section">
+    <div class="container">
+        <!-- Back Button -->
+        <button class="btn btn-secondary" style="margin-bottom: var(--spacing-2xl);" onclick="app.loadView('projects')">← Back to Projects</button>
+
+        <!-- Project Header -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">Wordle Solver</h1>
+            <p class="section__subtitle">A basic python application that employs both a greedy solution and an entropic 
+                solution to solve Wordle puzzles with optimal guesses.</p>
+        </div>
+
+        <!-- Project Image -->
+        <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
+            <img src="assets/images/placeholder.webp" alt="Power Supply Control Board" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Project Details Grid -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Overview -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
+                <p>Out of curiosity after playing wordle with my coworkers, I wondered what if I could algorithmically play the game 
+                    in such a way that would guarantee a better average performance compared to human players.
+                </p>
+                <p>At it's core being a CSP (Constrained Satisfaction Problem) designing a simplified terminal version of the game then running thousands of 
+                    simulations to test different solving algorithms was a fun exercise in both programming and algorithm design.
+                </p>
+                <p>
+                    After quickly designing a basic terminal version of the game using Python to test performance, I also implemented an automated solver that uses Selenium
+                    to play the actual web version of Wordle on New York Times' website.
+                </p>
+                <p>After playing around with a few algorithm designs, the final result was a bot that when tested on the set of 2315 possible wordle answers, 
+                    was able to attain a guess count of under four 93% of the time, with an average guess count of 3.67, while the average game score 
+                    as of Nov 2025 (<a href="https://wordraiders.com/average-wordle-scores/" target="_blank" style="color: var(--color-primary); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--color-primary); transition: all var(--transition-base);">source</a>) 
+                    sits at around 3.80
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md);">✓ Greedy Fast Algorithmic Solution</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Entropic High Performance Solution</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Infinite Automated Play Cycles</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Adjustable Word Libraries</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- Python - 10% -->
+                    <div style="width: 100%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Python - 100%">100%
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
+                <p>The initial approach to this problem was to take a greedy solution that would simply pick the word that contained the most common letters 
+                    among the remaining possible answers via a frequency ranking system. This worked decently, but the successrate for 6 total guesses was only 98%.
+                    If you wanted something as fast as possible, this was extremely effective as it is an O(n) solution. However, if you wanted the least number of
+                    average guesses made, a different solution would need to be implemented.
+                </p>
+                <p>
+                    The next approach taken was to implement an entropic solution that would calculate the expected information gain of each possible guess, and then 
+                    using that ranking as a way of determining the next word. This meant that even if a guess was not possible (i.e. contains/missing letters not in the answer),
+                    it could still be used if it provided high information gain. This solution was much more effective, achieving a 93% success rate for 4 or fewer guesses, and 
+                    an overall 100% effective success rate within 6 guesses for the wordle answer set.
+                </p>
+                <p>
+                    However, this solution was much more computationally expensive, as it required calculating the information gain for each possible guess against all remaining possible answers.
+                    This brought up a new implementation that ultimately drew this project to a close, where the technical fastest way to solve the finite list of wordle answers was simply
+                    to precompute a lookup table of optimal guesses for each possible state of the game, and then simply reference that table during gameplay.
+                </p>
+                <p>
+                    This gives both an O(1) solution and also better than human level performance at the cost of being inflexible to changes in the wordle answer set or rules.
+                </p>
+                <p>
+                    If you would like to learn more about the creation process of this project, you can check the README on the Github repository linked below. It contains
+                    detailed explanations of the design decisions, algorithm performance metrics, interesting findings, as well as future improvement ideas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Gallery -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Gallery</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Power Testing')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Power Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Board Explosion Aftermath')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Board Explosion Aftermath" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'RTOS Design')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="RTOS Design" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/LancelotShih/wordleAlgo" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
+            <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
+                <button class="btn btn-secondary" onclick="app.loadView('projects')">View More Projects</button>
+            </div>
+        </div>
+    </div>
+</section>

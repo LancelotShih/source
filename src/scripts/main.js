@@ -18,6 +18,7 @@ class App {
             'project-FinanceManager': 'src/views/projectDescriptions/FinanceManager.html',
             'project-PowerSupplyControlBoard': 'src/views/projectDescriptions/PowerSupplyControlBoard.html',
             'project-ARMapsNavigator': 'src/views/projectDescriptions/ARMapsNavigator.html',
+            'project-WordleSolver': 'src/views/projectDescriptions/WordleSolver.html',
             // Placeholder routes for other projects (create these files when ready)
             'project-ecommerce': 'src/views/projectDescriptions/ecommerce.html',
             'project-taskmanager': 'src/views/projectDescriptions/taskmanager.html',
