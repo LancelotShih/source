@@ -205,6 +205,9 @@ class App {
                 });
             });
         });
+
+        // Initialize parallax effect for projects page
+        this.initializeParallax();
     }
 
     /**
