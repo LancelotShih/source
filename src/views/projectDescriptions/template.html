@@ -166,6 +166,65 @@
             </div>
         </div>
 
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/LancelotShih/PowerSupplyControlBoard" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+                <a href="https://github.com/LancelotShih/PowerSupplyControlBoard/wiki" target="_blank" rel="noopener noreferrer" class="project-link-box" title="Documentation">
+                    <span style="font-size: 32px;">📖</span>
+                    <span style="font-size: 13px; font-weight: bold; margin-top: 8px; text-align: center;">Documentation</span>
+                </a>
+                <a href="https://github.com/LancelotShih/PowerSupplyControlBoard/issues" target="_blank" rel="noopener noreferrer" class="project-link-box" title="Issue Tracker">
+                    <span style="font-size: 32px;">🐛</span>
+                    <span style="font-size: 13px; font-weight: bold; margin-top: 8px; text-align: center;">Issues</span>
+                </a>
+                <a href="https://github.com/LancelotShih/PowerSupplyControlBoard/releases" target="_blank" rel="noopener noreferrer" class="project-link-box" title="Releases">
+                    <span style="font-size: 32px;">📦</span>
+                    <span style="font-size: 13px; font-weight: bold; margin-top: 8px; text-align: center;">Releases</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
+
         <!-- CTA Section -->
         <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
             <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>

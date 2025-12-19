@@ -12,7 +12,7 @@
 
         <!-- Project Image -->
         <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
-            <img src="assets/images/image1.png" alt="Power Supply Control Board" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            <img src="assets/images/placeholder.webp" alt="Power Supply Control Board" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
         </div>
 
         <!-- Project Details Grid -->
@@ -20,14 +20,27 @@
             <!-- Overview -->
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
-                <p>This project was meant to be a cool proof of concept of AR based navigation tools </p>
+                <p>This project was meant to be a cool proof of concept of AR based navigation tools that they could be used
+                    as a way of more intuitive navigation as our world infrastructure, especially in cities, becomes more and 
+                    more complex.
+                </p>
+                <p>
+                    It utilizes the ARcore SDK for android to provide your android device with AR feature sets such as environmental position tracking
+                    and plane detection. From there, I can then use the Google Maps API to pull in navigation data for general directional input
+                    and then calculate pathing checkpoints to place on the floor of the AR space to get from source to destination
+                </p>
+                <p>
+                    The pathing checkpoints are determined by segmentation vision models that can identify practical walking surfaces in the camera view
+                    and then place the checkpoints on those surfaces to ensure that the projected path is always walkable.
+                </p>
+
             </div>
 
             <!-- Key Features -->
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: var(--spacing-md);">✓ Add feature</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ WIP</li>
                 </ul>
             </div>
         </div>
@@ -39,7 +52,7 @@
                 <!-- Combined Progress Bar -->
                 <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
                     <!-- C/C++ - 40% -->
-                    <div style="width: 40%; 
+                    <div style="width: 100%; 
                         height: 100%; 
                         background: linear-gradient(90deg, #6366f1, #818cf8); 
                         display: flex; 
@@ -47,67 +60,7 @@
                         justify-content: center; 
                         color: white; 
                         font-size: 12px; 
-                        font-weight: bold;" title="C/C++ - 40%">40%
-                    </div>
-
-                    <!-- ARM/Embedded - 25% -->
-                    <div style="width: 25%; 
-                        height: 100%; 
-                        background: linear-gradient(90deg, #06b6d4, #22d3ee); 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        color: white; 
-                        font-size: 12px; 
-                        font-weight: bold;" title="ARM/Embedded - 25%">25%
-                    </div>
-                    
-                    <!-- Python - 10% -->
-                    <div style="width: 10%; 
-                        height: 100%; 
-                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        color: white; 
-                        font-size: 12px; 
-                        font-weight: bold;" title="Python - 10%">10%
-                    </div>
-                    
-                    <!-- GoLang - 10% -->
-                    <div style="width: 10%; 
-                        height: 100%; 
-                        background: linear-gradient(90deg, #ec4899, #f472b6); 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        color: white; 
-                        font-size: 12px; 
-                        font-weight: bold;" title="GoLang - 10%">10%
-                    </div>
-
-                    <!-- Altium - 10% -->
-                    <div style="width: 10%; 
-                        height: 100%; 
-                        background: linear-gradient(90deg, #10b981, #34d399); 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        color: white; 
-                        font-size: 12px; 
-                        font-weight: bold;" title="Altium - 10%">10%
-                    </div>
-
-                    <!-- STM32 - 5% -->
-                    <div style="width: 5%; 
-                        height: 100%; 
-                        background: linear-gradient(90deg, #f59e0b, #fbbf24); 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        color: white; 
-                        font-size: 12px; 
-                        font-weight: bold;" title="STM32 - 5%">5%
+                        font-weight: bold;" title="C/C++ - 40%">100%
                     </div>
                     
                 </div>
@@ -116,27 +69,7 @@
                 <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
                     <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
                         <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Add tech</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
-                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Add tech</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
-                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Add tech</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
-                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #ec4899, #f472b6); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Add tech</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
-                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #10b981, #34d399); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Add tech</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
-                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #f59e0b, #fbbf24); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Add tech</span>
+                        <span style="color: var(--color-gray); font-size: 14px;">Kotlin</span>
                     </div>
                 </div>
             </div>
@@ -146,9 +79,72 @@
         <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
             <div>
                 <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
-                <p>insert text here</p>
+                <p>This project is still a work in progress. Challenges will be posted once this project is marked as complete.</p>
             </div>
         </div>
+
+        <!-- Project Gallery -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Gallery</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Power Testing')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Power Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Board Explosion Aftermath')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Board Explosion Aftermath" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'RTOS Design')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="RTOS Design" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/LancelotShih/android-AR-AstraAtHome" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
 
         <!-- CTA Section -->
         <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">

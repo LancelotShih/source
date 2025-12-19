@@ -8,28 +8,41 @@
         </div>
 
         <!-- Timeline Controls -->
-        <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-3xl); justify-content: center; flex-wrap: wrap;">
+        <!-- <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-3xl); justify-content: center; flex-wrap: wrap;">
             <button class="timeline-filter" data-filter="all" onclick="filterTimeline('all')" style="background-color: var(--color-primary); color: white; border: none; padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: bold; transition: all var(--transition-base);">All Events</button>
             <button class="timeline-filter" data-filter="education" onclick="filterTimeline('education')" style="background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: bold; transition: all var(--transition-base);">Education</button>
             <button class="timeline-filter" data-filter="work" onclick="filterTimeline('work')" style="background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: bold; transition: all var(--transition-base);">Work</button>
             <button class="timeline-filter" data-filter="research" onclick="filterTimeline('research')" style="background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: bold; transition: all var(--transition-base);">Research</button>
+        </div> -->
+
+        <!-- Legend -->
+        <div style="display: flex; justify-content: center; gap: var(--spacing-2xl); flex-wrap: wrap; margin-top: var(--spacing-3xl); padding-top: var(--spacing-3xl); border-top: 1px solid var(--color-light-dark);">
+            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #06b6d4;"></div>
+                <span style="color: var(--color-gray);">Education</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #8b5cf6;"></div>
+                <span style="color: var(--color-gray);">Work Experience</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #10b981;"></div>
+                <span style="color: var(--color-gray);">Research</span>
+            </div>
         </div>
 
         <!-- Main Timeline Container -->
         <div style="position: relative; padding: var(--spacing-2xl) 0; max-width: 1100px; margin: 0 auto;">
             <!-- Timeline Central Line -->
-            <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--color-primary), var(--color-secondary)); transform: translateX(-50%);"></div>
+            <div style="position: absolute; left: 50%; top: var(--spacing-3xl); bottom: 0; width: 2px; background: linear-gradient(180deg, var(--color-primary), var(--color-secondary)); transform: translateX(-50%);"></div>
 
             <!-- Timeline Items -->
             <div id="timeline-container" style="position: relative;">
                 
                 <!-- 2019-2024: UNIVERSITY (Main Event) -->
-                <div class="timeline-item timeline-item--left" data-category="education" style="display: flex; flex-direction: row; align-items: flex-start; gap: var(--spacing-lg); margin-bottom: var(--spacing-3xl); text-align: right;">
-                    <div style="position: relative; display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
-                        <div style="width: 24px; height: 24px; border-radius: 50%; background-color: #06b6d4; border: 5px solid var(--color-dark); box-shadow: 0 0 0 4px #06b6d440;"></div>
-                    </div>
-                    <div style="flex: 1; max-width: 450px;">
-                        <div style="background-color: var(--color-light); border-radius: var(--radius-lg); padding: var(--spacing-lg); border-left: 5px solid #06b6d4; box-shadow: var(--shadow-md);">
+                <div class="timeline-item timeline-item--left" data-category="education" style="display: flex; flex-direction: row; align-items: flex-start; gap: 0; margin-bottom: var(--spacing-3xl);">
+                    <div style="flex: 1; max-width: 500px; text-align: right; width: 50%; padding-right: var(--spacing-sm);">
+                        <div style="background-color: var(--color-light); border-radius: var(--radius-lg); padding: var(--spacing-lg); border-right: 5px solid #06b6d4; box-shadow: var(--shadow-md);">
                             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-md); gap: var(--spacing-md);">
                                 <div>
                                     <h3 style="margin: 0; color: var(--color-white); font-size: var(--font-size-xl); font-weight: bold;">University - Computer Engineering</h3>
@@ -78,11 +91,14 @@
                                     <div style="flex: 1;">
                                         <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--color-white); font-size: var(--font-size-base);">Electronics and Firmware Design Intern - Tesla</h4>
                                         <p style="margin: 0 0 var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm);">Jan - Dec 2025 • 12 months</p>
-                                        <p style="margin: var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm); line-height: 1.5;">Designed and tested embedded control systems using Altium and C/C++</p>
+                                        <p style="margin: var(--spacing-xs) 0; color: var(--color-gray); font-size: var(--font-size-sm); line-height: 1.5;">Designed and tested embedded control systems using Altium, C/C++, Python, and GoLang</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
+                        <div style="width: 24px; height: 24px; border-radius: 50%; background-color: #06b6d4; border: 5px solid var(--color-dark); box-shadow: 0 0 0 4px #06b6d440;"></div>
                     </div>
                 </div>
 
@@ -138,21 +154,13 @@
             </div>
         </div>
 
-        <!-- Legend -->
         <div style="display: flex; justify-content: center; gap: var(--spacing-2xl); flex-wrap: wrap; margin-top: var(--spacing-3xl); padding-top: var(--spacing-3xl); border-top: 1px solid var(--color-light-dark);">
             <div style="display: flex; align-items: center; gap: var(--spacing-md);">
-                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #06b6d4;"></div>
-                <span style="color: var(--color-gray);">Education</span>
+                <span style="color: var(--color-gray);">Timeline will be expanded as more experiences are made</span>
             </div>
-            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
-                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #8b5cf6;"></div>
-                <span style="color: var(--color-gray);">Work Experience</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
-                <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #10b981;"></div>
-                <span style="color: var(--color-gray);">Research</span>
             </div>
         </div>
+        
     </div>
 </section>
 
