@@ -116,58 +116,21 @@
                     <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required>
                 </div>
                 <div class="form__group">
-                    <textarea id="message" name="message" placeholder="Your Message" class="form-textarea" required></textarea>
+                    <textarea id="message" name="message" placeholder="Your Message (max 500 characters)" class="form-textarea" required maxlength="500"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
             <div style="display: flex; flex-direction: column; gap: var(--spacing-lg); justify-content: center;">
-                <a href="mailto:shihlancelot@gmail.com" class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
+                <button class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;" onclick="copyEmail()">
                     📧 Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/lancelot-shih/" class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
+                </button>
+                <a href="https://www.linkedin.com/in/lancelot-shih/" target="_blank" class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
                     💼 LinkedIn
                 </a>
-                <a href="https://github.com/LancelotShih" class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
+                <a href="https://github.com/LancelotShih" target="_blank" class="btn btn-secondary" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
                     🐙 GitHub
                 </a>
             </div>
         </div>
     </div>
 </section>
-
-<script>
-// Form submission handler
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value,
-            };
-
-            const validation = App.FormHandler.validateForm(formData);
-            
-            if (!validation.isValid) {
-                Notification.error('Please check your form inputs');
-                return;
-            }
-
-            const btn = this.querySelector('button[type="submit"]');
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-
-            // Simulate submission
-            setTimeout(() => {
-                Notification.success('Message sent successfully!');
-                this.reset();
-                btn.textContent = 'Send Message';
-                btn.disabled = false;
-            }, 1500);
-        });
-    }
-});
-</script>

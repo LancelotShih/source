@@ -103,6 +103,10 @@ class App {
             this.initializeAboutView();
         }
         
+        if (viewName === 'home') {
+            this.initializeHomeView();
+        }
+        
         // Update active navigation link
         this.updateActiveNavLink(viewName);
         
@@ -215,6 +219,75 @@ class App {
                 setupFilterButtons();
             }
         }, 100);
+    }
+
+    /**
+     * Initialize home view functionality
+     */
+    initializeHomeView() {
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value,
+                };
+
+                console.log('Form submitted with data:', formData);
+
+                // Basic validation
+                if (!formData.name || !formData.email || !formData.message) {
+                    Notification.error('Please fill in all fields');
+                    return;
+                }
+
+                // Character limit validation
+                if (formData.message.length > 500) {
+                    Notification.error('Message must be 500 characters or less');
+                    return;
+                }
+
+                const btn = contactForm.querySelector('button[type="submit"]');
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+
+                // Check if EmailJS and sendContactEmail are available
+                if (typeof window.sendContactEmail !== 'function') {
+                    console.error('sendContactEmail function not found');
+                    Notification.error('Email service not ready. Please try again.');
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                    return;
+                }
+
+                // Send email using EmailJS with timeout
+                const emailPromise = window.sendContactEmail(formData);
+                const timeoutPromise = new Promise((_, reject) => 
+                    setTimeout(() => reject(new Error('Request timed out')), 10000)
+                );
+
+                Promise.race([emailPromise, timeoutPromise])
+                    .then((response) => {
+                        console.log('Email sent successfully:', response);
+                        Notification.success('Message sent successfully!');
+                        contactForm.reset();
+                        btn.textContent = 'Sent!';
+                        btn.disabled = false;
+                        setTimeout(() => {
+                            btn.textContent = 'Send Message';
+                        }, 2000);
+                    })
+                    .catch((error) => {
+                        console.error('Email sending failed:', error);
+                        Notification.error('Failed to send message. Please try again.');
+                        btn.textContent = 'Send Message';
+                        btn.disabled = false;
+                    });
+            });
+        }
     }
 
     /**

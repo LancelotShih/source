@@ -20,6 +20,11 @@
     color: var(--color-white);
 }
 
+.form__input,
+.form__textarea {
+    color: white !important;
+}
+
 .form__input::placeholder,
 .form__textarea::placeholder {
     color: var(--color-gray);

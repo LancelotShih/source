@@ -210,4 +210,13 @@ const throttle = (func, delay = 300) => {
     };
 };
 
-export { DOM, Events, Notification, Storage, API, Scroll, IntersectionObserverHelper, debounce, throttle };
+// Make utilities globally available
+window.DOM = DOM;
+window.Events = Events;
+window.Notification = Notification;
+window.Storage = Storage;
+window.API = API;
+window.Scroll = Scroll;
+window.IntersectionObserverHelper = IntersectionObserverHelper;
+window.debounce = debounce;
+window.throttle = throttle;

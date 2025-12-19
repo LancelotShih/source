@@ -171,3 +171,83 @@ window.App = {
     NavigationService,
     ThemeService,
 };
+
+/**
+ * Initialize EmailJS
+ */
+function initializeEmailJS() {
+    // Initialize EmailJS with your public key
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init("3sYq7fYAJpqhy558a");
+        console.log('EmailJS initialized successfully');
+    } else {
+        console.error('EmailJS library not loaded - check network or ad blockers');
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initializeEmailJS);
+
+/**
+ * Global utility functions
+ */
+function copyEmail() {
+    const email = 'shihlancelot@gmail.com';
+    navigator.clipboard.writeText(email).then(() => {
+        const emailButton = document.querySelector('button[onclick="copyEmail()"]');
+        if (emailButton) {
+            const originalText = emailButton.textContent;
+            emailButton.textContent = '📧 Email Copied!';
+            setTimeout(() => {
+                emailButton.textContent = originalText;
+            }, 2000);
+        }
+    }).catch(err => {
+        console.error('Failed to copy email:', err);
+    });
+}
+
+/**
+ * Send contact form email
+ */
+function sendContactEmail(formData) {
+    // Your EmailJS credentials
+    const PUBLIC_KEY = "3sYq7fYAJpqhy558a";
+    const SERVICE_ID = "service_4qq82mv";
+    const TEMPLATE_ID = "template_k6s51et";
+    
+    // Match all template variables expected by your EmailJS template
+    const templateParams = {
+        title: "New Contact Form Submission",
+        name: formData.name,
+        from_name: formData.name,
+        from_email: formData.email,
+        email: formData.email,
+        to_email: "shihlancelot@gmail.com",
+        message: formData.message,
+    };
+
+    console.log('Sending email with params:', templateParams);
+    console.log('Using Service ID:', SERVICE_ID, 'Template ID:', TEMPLATE_ID);
+    
+    // Check if emailjs is available
+    if (typeof emailjs === 'undefined') {
+        console.error('EmailJS not loaded');
+        return Promise.reject(new Error('EmailJS not loaded'));
+    }
+
+    // Send email using EmailJS
+    return emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+        .then((response) => {
+            console.log('EmailJS success response:', response);
+            return response;
+        })
+        .catch((error) => {
+            console.error('EmailJS error:', error);
+            throw error;
+        });
+}
+
+// Make functions globally available
+window.sendContactEmail = sendContactEmail;
+window.copyEmail = copyEmail;
