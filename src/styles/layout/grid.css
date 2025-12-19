@@ -21,6 +21,8 @@
 
 .section {
     padding: var(--spacing-4xl) var(--spacing-lg);
+    position: relative;
+    z-index: 1;
 }
 
 .section__title {

@@ -9,6 +9,8 @@
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
     border: 1px solid var(--color-light-dark);
+    position: relative;
+    z-index: 1;
 }
 
 .card:hover {

@@ -219,6 +219,57 @@ class App {
                 setupFilterButtons();
             }
         }, 100);
+
+        // Initialize parallax title effect
+        this.initializeAboutParallax();
+    }
+
+    /**
+     * Initialize parallax effects for about page
+     */
+    initializeAboutParallax() {
+        const title = document.getElementById('parallax-title');
+        const subtitle = document.querySelector('.about-hero__subtitle');
+        const aboutHero = document.querySelector('.about-hero');
+        
+        if (!title || !aboutHero) return;
+
+        const initialFontSize = parseFloat(getComputedStyle(title).fontSize);
+        const minFontSize = initialFontSize * 0.4; // Shrink to 40% of original
+        const heroHeight = aboutHero.offsetHeight;
+
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const scrollProgress = Math.min(scrollY / (heroHeight * 0.8), 1);
+            
+            // Calculate new font size
+            const newFontSize = initialFontSize - (scrollProgress * (initialFontSize - minFontSize));
+            title.style.fontSize = `${newFontSize}px`;
+            
+            // Move title up slightly as you scroll
+            const translateY = scrollProgress * -50;
+            title.style.transform = `translateY(${translateY}px)`;
+            
+            // Fade out subtitle
+            if (subtitle) {
+                subtitle.style.opacity = 1 - scrollProgress;
+            }
+        };
+
+        // Throttle scroll for performance
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Initialize parallax for stars
+        this.initializeParallax();
     }
 
     /**
@@ -288,6 +339,91 @@ class App {
                     });
             });
         }
+
+        // Initialize parallax effect
+        this.initializeParallax();
+    }
+
+    /**
+     * Initialize mouse parallax effect for hero section
+     */
+    initializeParallax() {
+        // Select all stars and constellation lines
+        const parallaxElements = document.querySelectorAll('.star, .constellation-lines');
+        
+        if (parallaxElements.length === 0) return;
+
+        // Store center position and current transforms
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        
+        // Track mouse and scroll offsets separately
+        let mouseOffsets = new Map();
+        let scrollOffset = 0;
+
+        const updateTransforms = () => {
+            parallaxElements.forEach((el) => {
+                const mouseOffset = mouseOffsets.get(el) || { x: 0, y: 0 };
+                const speed = parseFloat(el.dataset.speed) || 0.02;
+                const scrollY = scrollOffset * speed * 20;
+                
+                // Combine mouse and scroll transforms
+                el.style.transform = `translate(${mouseOffset.x}px, ${mouseOffset.y + scrollY}px)`;
+            });
+        };
+
+        const handleMouseMove = (e) => {
+            const mouseX = e.clientX - centerX;
+            const mouseY = e.clientY - centerY;
+
+            parallaxElements.forEach((el) => {
+                const speed = parseFloat(el.dataset.speed) || 0.02;
+                // Subtle movement multiplier
+                const x = mouseX * speed * 2;
+                const y = mouseY * speed * 2;
+                
+                mouseOffsets.set(el, { x, y });
+            });
+            
+            updateTransforms();
+        };
+
+        const handleScroll = () => {
+            scrollOffset = window.scrollY;
+            updateTransforms();
+        };
+
+        // Throttle the mousemove event for performance
+        let mouseTicking = false;
+        document.addEventListener('mousemove', (e) => {
+            if (!mouseTicking) {
+                window.requestAnimationFrame(() => {
+                    handleMouseMove(e);
+                    mouseTicking = false;
+                });
+                mouseTicking = true;
+            }
+        });
+
+        // Throttle scroll event for performance
+        let scrollTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll();
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        });
+
+        // Reset mouse offset on mouse leave (but keep scroll)
+        document.addEventListener('mouseleave', () => {
+            parallaxElements.forEach((el) => {
+                mouseOffsets.set(el, { x: 0, y: 0 });
+            });
+            updateTransforms();
+        });
     }
 
     /**
