@@ -206,8 +206,10 @@ class App {
             });
         });
 
-        // Initialize parallax effect for projects page
-        this.initializeParallax();
+        // Initialize parallax effect for projects page (slight delay to ensure DOM is ready)
+        setTimeout(() => {
+            this.initializeParallax();
+        }, 50);
     }
 
     /**
