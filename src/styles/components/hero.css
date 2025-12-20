@@ -125,16 +125,19 @@
     stroke-linecap: round;
 }
 
-/* Line drawing animation */
+/* Line drawing animation - continuous loop */
 @keyframes draw-line {
-    0% { stroke-dashoffset: 1000; opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { stroke-dashoffset: 0; opacity: 0.4; }
+    0% { stroke-dashoffset: 1000; opacity: 0; }
+    10% { opacity: 0.6; }
+    40% { stroke-dashoffset: 0; opacity: 0.4; }
+    60% { stroke-dashoffset: 0; opacity: 0.4; }
+    90% { opacity: 0; }
+    100% { stroke-dashoffset: 1000; opacity: 0; }
 }
 
 .constellation-lines line {
     stroke-dasharray: 1000;
-    animation: draw-line 3s ease-out forwards;
+    animation: draw-line 8s ease-in-out infinite;
 }
 
 .constellation-lines line:nth-child(1) { animation-delay: 0.2s; }
