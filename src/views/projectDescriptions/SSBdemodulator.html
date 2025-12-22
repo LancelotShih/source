@@ -1,0 +1,206 @@
+<!-- Project Description: SSB Demodulator -->
+<section class="section" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
+    <div class="container">
+        <!-- Back Button -->
+        <button class="btn btn-secondary" style="margin-bottom: var(--spacing-2xl);" onclick="app.loadView('projects')">← Back to Projects</button>
+
+        <!-- Project Header -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">SSB Demodulator</h1>
+            <p class="section__subtitle">Building a single sideband demodulator with a team as part of a hardware design course, 
+                meant to integrate together to form a fully functioning radio transmitting/receiving in the 8-16 MHz (HF) band.</p>
+        </div>
+
+        <!-- Project Image -->
+        <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
+            <img src="assets/images/placeholder.webp" alt="SSB Demodulator" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Project Details Grid -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Overview -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
+                <p>A single sideband (SSB) demodulator designed to take in high frequency (HF) radio signals, 
+                    and demodulate them down to audio frequencies for playback. This project was part of a larger team effort to build a complete HF radio system, 
+                    with other team members responsible for the transmitter, power amplifier, and antenna systems.
+                </p>
+                <p>
+                    This project focuses on demodulating single-sideband (SSB) HF radio signals using an entirely analog signal chain. 
+                    Signals in the 8–16 MHz range are first buffered and split into two paths, where op-amp phase shifters generate a precise 90° 
+                    quadrature relationship. These I and Q signals are then fed into balanced mixers driven by a synchronized local oscillator, 
+                    performing quadrature downconversion directly to baseband. By mathematically recombining the I/Q outputs, one sideband is 
+                    constructively reinforced while the other is suppressed. 
+                </p>
+                <p>
+                    The resulting low-frequency audio signal is then filtered and amplified for output audio. 
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md);">✓ Wide Frequency Range Input (8-16 MHz)</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Noise Rejection</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Audio Output Amplifier</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Adjustable Side Band Selection (USB, LSB, External Inject)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- Altium - 50% -->
+                    <div style="width: 50%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Altium - 50%">50%
+                    </div>
+                    <!-- SPICE Sim - 30% -->
+                    <div style="width: 30%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #06b6d4, #22d3ee); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="SPICE Sim - 30%">30%
+                    </div>
+                    <!-- Circuit Design - 20% -->
+                    <div style="width: 20%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #ec4899, #f472b6); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Circuit Design - 20%">20%
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Altium</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">SPICE Sim</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #ec4899, #f472b6); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Circuit Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
+                <p>
+                    One of the main challenges was just understanding how the phase shifting and quadrature mixing worked in practice,
+                    as well as ensuring that the analog components were precise enough to maintain signal integrity. We actually ended up running into an issue where 
+                    our phase shifters would fail to suppress a particular few frequencies in the gigahertz range, which when amplified caused some static
+                    in the audio output.
+                </p>
+                <p>
+                    Another challenge was that during the Altium design phase, we had accidentally swapped the + and - inputs of the low pass filter after the 
+                    phase shifting stage, which basically meant zero signal output after shifting. Because this was the only component we chose that was not SMD, 
+                    we were lucky enough to be able to bend the pins and jumper the connections to fix the issue without having to remake the entire PCB.
+                </p>
+                <p>
+                    Lastly, we also had accidentally designed the pinout of the board to be mirrored against what the main motherboard we were meant to plug into. 
+                    This meant for us to integrate with the rest of the subsystems, we had to create a custom jumper adapter to flip the connections around during testing.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Gallery -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Gallery</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Power Testing')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Power Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Board Explosion Aftermath')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Board Explosion Aftermath" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'RTOS Design')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="RTOS Design" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/jdtech3/SSB-Demod" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
+            <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
+                <button class="btn btn-secondary" onclick="app.loadView('projects')">View More Projects</button>
+            </div>
+        </div>
+    </div>
+</section>
