@@ -1,4 +1,4 @@
-<!-- Project Description: SSB Demodulator -->
+<!-- Project Description: Wake Up Joe -->
 <section class="section" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
     <div class="container">
         <!-- Back Button -->
@@ -6,14 +6,14 @@
 
         <!-- Project Header -->
         <div style="margin-bottom: var(--spacing-3xl);">
-            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">SSB Demodulator</h1>
-            <p class="section__subtitle">Building a single sideband demodulator with a team as part of a hardware design course, 
-                meant to integrate together to form a fully functioning radio transmitting/receiving in the 8-16 MHz (HF) band.</p>
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">Wake Up Joe</h1>
+            <p class="section__subtitle">An augmented reality voice powered morning routine experinece that assists in helping 
+                        you get dressed, make breakfast, and update you on today's events.</p>
         </div>
 
         <!-- Project Image -->
         <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
-            <img src="assets/images/placeholder.webp" alt="SSB Demodulator" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            <img src="assets/images/placeholder.webp" alt="Wake Up Joe" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
         </div>
 
         <!-- Project Details Grid -->
@@ -21,19 +21,20 @@
             <!-- Overview -->
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
-                <p>A single sideband (SSB) demodulator designed to take in high frequency (HF) radio signals, 
-                    and demodulate them down to audio frequencies for playback. This project was part of a larger team effort to build a complete HF radio system, 
-                    with other team members responsible for the transmitter, power amplifier, and antenna systems.
+                <p>
+                    A MakeUofT 2024 Hackathon project with the focus on home automation, we designed and developed "Wake Up Joe", an augmented morning routine 
+                    experience that aimed to leverage the Qualcomm Android SDK to create a voice-powered assistant that helps users get ready for their day.
                 </p>
                 <p>
-                    This project focuses on demodulating single-sideband (SSB) HF radio signals using an entirely analog signal chain. 
-                    Signals in the 8–16 MHz range are first buffered and split into two paths, where op-amp phase shifters generate a precise 90° 
-                    quadrature relationship. These I and Q signals are then fed into balanced mixers driven by a synchronized local oscillator, 
-                    performing quadrature downconversion directly to baseband. By mathematically recombining the I/Q outputs, one sideband is 
-                    constructively reinforced while the other is suppressed. 
+                    The routine would essentially begin when the user wakes up and wears their AR device of choice, which pulls up a UI overlay that guides them through 
+                    various morning routine tasks such as selecting an outfit, making breakfast, weather concerns, and getting updates on the day's events.
                 </p>
                 <p>
-                    The resulting low-frequency audio signal is then filtered and amplified for output audio. 
+                    Among these routines, an open mic in the room would listen for voice commands from the user to interact with the system, such as "Show me today's weather", "Brew me a cup of coffee",
+                    or "What's on my calendar today?". The system would then process these commands and provide relevant responses or actions through the AR interface.
+                </p>
+                <p>
+                    The voice assistant was entirely local, built using Qualcomm's Android SDK using TensorFlow Lite models for speech recognition and natural language processing.
                 </p>
             </div>
 
@@ -41,10 +42,10 @@
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: var(--spacing-md);">✓ Wide Frequency Range Input (8-16 MHz)</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Noise Rejection</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Audio Output Amplifier</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Adjustable Side Band Selection (USB, LSB, External Inject)</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Voice Controlled Routine</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ AR UI Interface</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Local HTTP Server For Command Processing</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ TensorFlow Lite Voice Processing</li>
                 </ul>
             </div>
         </div>
@@ -55,19 +56,20 @@
             <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
                 <!-- Combined Progress Bar -->
                 <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
-                    <!-- Altium - 50% -->
-                    <div style="width: 50%; 
+                    <!-- Java - 20% -->
+                    <div style="width: 20%; 
                         height: 100%; 
-                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        background: linear-gradient(90deg, #6366f1, #818cf8); 
                         display: flex; 
                         align-items: center; 
                         justify-content: center; 
                         color: white; 
                         font-size: 12px; 
-                        font-weight: bold;" title="Altium - 50%">50%
+                        font-weight: bold;" title="Java - 20%">20%
                     </div>
-                    <!-- SPICE Sim - 30% -->
-                    <div style="width: 30%; 
+
+                    <!-- HTML/CSS - 40% -->
+                    <div style="width: 40%; 
                         height: 100%; 
                         background: linear-gradient(90deg, #06b6d4, #22d3ee); 
                         display: flex; 
@@ -75,34 +77,35 @@
                         justify-content: center; 
                         color: white; 
                         font-size: 12px; 
-                        font-weight: bold;" title="SPICE Sim - 30%">30%
+                        font-weight: bold;" title="HTML/CSS - 40%">40%
                     </div>
-                    <!-- Circuit Design - 20% -->
-                    <div style="width: 20%; 
+                    
+                    <!-- TensorFlow Lite - 40% -->
+                    <div style="width: 40%; 
                         height: 100%; 
-                        background: linear-gradient(90deg, #ec4899, #f472b6); 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
                         display: flex; 
                         align-items: center; 
                         justify-content: center; 
                         color: white; 
                         font-size: 12px; 
-                        font-weight: bold;" title="Circuit Design - 20%">20%
-                    </div>
+                        font-weight: bold;" title="TensorFlow Lite - 40%">40%
+                    </div>  
                 </div>
                 
                 <!-- Legend -->
                 <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
                     <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
-                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Altium</span>
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Java</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
                         <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">SPICE Sim</span>
+                        <span style="color: var(--color-gray); font-size: 14px;">HTML/CSS</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
-                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #ec4899, #f472b6); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Circuit Design</span>
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">TensorFlow Lite</span>
                     </div>
                 </div>
             </div>
@@ -112,21 +115,16 @@
         <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
             <div>
                 <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
-                <p>
-                    One of the main challenges was just understanding how the phase shifting and quadrature mixing worked in practice,
-                    as well as ensuring that the analog components were precise enough to maintain signal integrity. We actually ended up running into an issue where 
-                    our phase shifters would fail to suppress a particular spike at the 1 MHz range, which when amplified caused some static
-                    in the audio output.
+                <p>One of the main challenges was making sure that the voice recognition worked well enough and could act upon requests well enough so that it was at least
+                    functional within the limited time frame of the hackathon. We had issues where it would misinterpret words, pick up gibberish and try to spell those words out,
+                    and also just missing commands entirely. By speccing a limited set of keywords and phrases that the system would recognize, we were able to improve accuracy significantly.
                 </p>
                 <p>
-                    Another challenge was that during the Altium design phase, we had accidentally swapped the + and - inputs of the low pass filter after the 
-                    phase shifting stage, which basically meant zero signal output after shifting. Because this was the only component we chose that was not SMD, 
-                    we were lucky enough to be able to bend the pins and jumper the connections to fix the issue without having to remake the entire PCB.
+                    Another challenge was just getting the voice recognition to work on the Qualcomm SDK in the first place, as the device was fairly new and there was limited documentation available
+                    since it was meant to promote the new Snapdragon NPU unit for on-device AI processing. We had to do a lot of trial and error with different model formats and configurations
+                    before we were able to get a working setup.
                 </p>
-                <p>
-                    Lastly, we also had accidentally designed the pinout of the board to be mirrored against what the main motherboard we were meant to plug into. 
-                    This meant for us to integrate with the rest of the subsystems, we had to create a custom jumper adapter to flip the connections around during testing.
-                </p>
+                
             </div>
         </div>
 
@@ -150,7 +148,7 @@
         <div style="margin-bottom: var(--spacing-3xl);">
             <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
             <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
-                <a href="https://github.com/jdtech3/SSB-Demod" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                <a href="https://github.com/jdtech3/WakeUpJoe" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
                     <span style="font-size: 32px;">🐙</span>
                     <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
                 </a>
