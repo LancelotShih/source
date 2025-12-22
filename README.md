@@ -347,7 +347,3 @@ const filtered = App.ProjectService.filterProjectsByCategory(projects, 'web');
 ## 👨‍💻 Support
 
 For questions or improvements, refer to the code comments and documentation within each file.
-
----
-
-**Built with ❤️ by Lancelot Shih**
