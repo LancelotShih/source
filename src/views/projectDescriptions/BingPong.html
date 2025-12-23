@@ -1,0 +1,217 @@
+<!-- Project Description: Bing Pong -->
+<section class="section" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
+    <div class="container">
+        <!-- Back Button -->
+        <button class="btn btn-secondary" style="margin-bottom: var(--spacing-2xl);" onclick="app.loadView('projects')">← Back to Projects</button>
+
+        <!-- Project Header -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">Bing Pong</h1>
+            <p class="section__subtitle">A simple ping pong game implemented for the Nios II FPGA architecture. 
+                The game allows a player to play against a computer by hitting a virtual ball back and forth across the screen using paddles.</p>
+        </div>
+
+        <!-- Project Image -->
+        <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
+            <img src="assets/images/placeholder.webp" alt="Bing Pong" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Project Details Grid -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Overview -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
+                <p>
+                    The Bing Pong project was a part of the ECE243 final course project at UofT and was inspired heavily by the mobile game "I'm Ping Pong King".
+                    You can find the apk <a href="https://apkpure.com/i-m-ping-pong-king/com.orangenose.tablefull" target="_blank" rel="noopener noreferrer">here</a>.
+                </p>
+                <p>
+                    The game was designed in two phases, the first phase involved creating the state machine logic necessary to update the ball's next state.
+                    It would take the starting position of the ball, whether it was on your or the CPU's side of the table, then look at what two possible 
+                    animation states it would play. For instance hitting the ball starting from the left table position would result in either a left to 
+                    left trajectory or a left to right trajectory animation to be played. It then checks how early the player pressed the key to hit the 
+                    ball and decides which animation to play based on that timing.
+                </p>
+                <p>
+                    The second phase was to design the animations to be played on the VGA display depending on the game state. The animations were drawn using 
+                    a simplistic ray tracing algorithm (Bresenham's line algorithm with a gravity factor) that would use a calculated velocity to 
+                    resize and translate the ball across the screen in a way that looks 3-Dimensional. A linear projection was also applied to the ball to give 
+                    it a shadow but we found at the cost of performance as it would slow the game down significantly.
+                </p>
+                <p>
+                    For a demo of the game in action, scroll to the bottom of the page to see the github README to find the demonstration video. 
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md);">✓ Various CPU difficulties</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Instantaneous Response Feedback Gameplay</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Closed Game State Machine Design Loop</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Sprite Animations</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Ray-traced Shadow Effects</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- C/C++ - 50% -->
+                    <div style="width: 50%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #6366f1, #818cf8); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="C/C++ - 50%">50%
+                    </div>
+
+                    <!-- FPGA - 35% -->
+                    <div style="width: 35%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #06b6d4, #22d3ee); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="FPGA - 35%">35%
+                    </div>
+                    
+                    <!-- Verilog - 15% -->
+                    <div style="width: 15%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Verilog - 15%">15%
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">C/C++</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">FPGA</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Verilog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
+                <p>
+                    One of the main challenges was actually getting the animations to play and bounce normally. As the ball went faster and faster, the curvature 
+                    of the ball's trajectory would also have to change as the way the ball path is calculated is based off of normal kinematic equations due to the 
+                    nature of programming for an FPGA as the alternative was to manually key frame every single frame of the ball's movement which would be impractical,
+                    and we could not use kinematics to account for ball spin physics which is what is usually responsible for the trajectories we would normally see
+                    in real life ping pong games.
+                </p>
+                <p>
+                    This meant we would need to adjust the gravity factory as the game sped up to make the ball appear to be bouncing normally, as well as set bouncing
+                    boundaries to ensure it always looked like the ball was bouncing on the correct side of the table. Part of the reason we wanted to add ray 
+                    traced shadows through linear projection was to further sell the image of the ball bouncing in 3D space while looking at a 2D screen.
+                </p>
+                <p>
+                    One other challenge was also fiddling with the difficulty would cause the ball handling logic to break as different timings depending on the difficulty
+                    would mean we would need to adjust the timings for every new difficulty we added. Instead we opted for a simpler solution of just having the difficulty 
+                    curve ramp be the same across all difficulties, and the only difference would be the number of successful rallies before the CPU would forfeit. 
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Gallery -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Gallery</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Power Testing')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Power Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Board Explosion Aftermath')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Board Explosion Aftermath" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'RTOS Design')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="RTOS Design" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/LancelotShih/bingpong" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
+            <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
+                <button class="btn btn-secondary" onclick="app.loadView('projects')">View More Projects</button>
+            </div>
+        </div>
+    </div>
+</section>
