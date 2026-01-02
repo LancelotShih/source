@@ -517,9 +517,14 @@ class App {
         
         // Store current gallery context
         const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+        
+        // Normalize the clicked image source for comparison (decode URL and get filename)
+        const clickedFilename = decodeURIComponent(imageSrc.split('/').pop());
+        
         const currentIndex = galleryItems.findIndex(item => {
             const itemSrc = item.querySelector('img').src;
-            return itemSrc.includes(imageSrc.split('/').pop());
+            const itemFilename = decodeURIComponent(itemSrc.split('/').pop());
+            return itemFilename === clickedFilename;
         });
         
         this.galleryState = {
@@ -530,8 +535,12 @@ class App {
             currentIndex: currentIndex >= 0 ? currentIndex : 0
         };
         
-        // Update modal display
-        this.updateGalleryModal();
+        // Update modal display using the passed imageSrc and imageTitle for accuracy
+        const modalImg = document.getElementById('gallery-modal-img');
+        const modalTitle = document.getElementById('gallery-modal-title');
+        modalImg.src = imageSrc;
+        modalImg.alt = imageTitle;
+        modalTitle.textContent = imageTitle;
         
         // Show modal
         modal.classList.add('active');
