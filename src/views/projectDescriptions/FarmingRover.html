@@ -1,4 +1,4 @@
-<!-- Project Description: Bing Pong -->
+<!-- Project Description: Farming Rover -->
 <section class="section" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
     <div class="container">
         <!-- Back Button -->
@@ -6,14 +6,14 @@
 
         <!-- Project Header -->
         <div style="margin-bottom: var(--spacing-3xl);">
-            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">Bing Pong</h1>
-            <p class="section__subtitle">A simple ping pong game implemented for the Nios II FPGA architecture. 
-                The game allows a player to play against a computer by hitting a virtual ball back and forth across the screen using paddles.</p>
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">Farming Rover</h1>
+            <p class="section__subtitle">A rover designed using various servo and hobby motors and remote controlled using HTTP requests. 
+                Designed to pick up objects via remote control and return to home base after usage.</p>
         </div>
 
         <!-- Project Image -->
         <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
-            <img src="assets/images/BingPong/Screenshot2024-04-08232305.png" alt="Bing Pong" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            <img src="assets/images/FarmingRover/20240121_150454.jpg" alt="Farming Rover" style="max-width: 400px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
         </div>
 
         <!-- Project Details Grid -->
@@ -21,25 +21,13 @@
             <!-- Overview -->
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
-                <p>
-                    The Bing Pong project was a part of the ECE243 final course project at UofT and was inspired heavily by the mobile game "I'm Ping Pong King".
-                    You can find the apk <a href="https://apkpure.com/i-m-ping-pong-king/com.orangenose.tablefull" target="_blank" rel="noopener noreferrer">here</a>.
+                <p>Designed as a part of the UTRA Hacks 2024 Hackathon, the Farming Rover is a remote-controlled vehicle built to assist in agricultural tasks.
+                    The rover is equipped with various servo and hobby motors that allow it to navigate terrain, pick up objects, and return to its home base.
                 </p>
                 <p>
-                    The game was designed in two phases, the first phase involved creating the state machine logic necessary to update the ball's next state.
-                    It would take the starting position of the ball, whether it was on your or the CPU's side of the table, then look at what two possible 
-                    animation states it would play. For instance hitting the ball starting from the left table position would result in either a left to 
-                    left trajectory or a left to right trajectory animation to be played. It then checks how early the player pressed the key to hit the 
-                    ball and decides which animation to play based on that timing.
-                </p>
-                <p>
-                    The second phase was to design the animations to be played on the VGA display depending on the game state. The animations were drawn using 
-                    a simplistic ray tracing algorithm (Bresenham's line algorithm with a gravity factor) that would use a calculated velocity to 
-                    resize and translate the ball across the screen in a way that looks 3-Dimensional. A linear projection was also applied to the ball to give 
-                    it a shadow but we found at the cost of performance as it would slow the game down significantly.
-                </p>
-                <p>
-                    For a demo of the game in action, scroll to the bottom of the page to see the github README to find the demonstration video. 
+                    We used an ESP32 microcontroller as a means to handle all motor controls and an RPI as the main HTTP server that was used to receive commands from the user
+                    who would request for the rover to move in either preset routines or manual control via a web interface. There was also a live camera feed that allowed for
+                    the user to see in real time what the rover was seeing.
                 </p>
             </div>
 
@@ -47,11 +35,9 @@
             <div>
                 <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: var(--spacing-md);">✓ Various CPU difficulties</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Instantaneous Response Feedback Gameplay</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Closed Game State Machine Design Loop</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Sprite Animations</li>
-                    <li style="margin-bottom: var(--spacing-md);">✓ Ray-traced Shadow Effects</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Remote control via HTTP requests</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Live camera feed for real-time viewing</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Object pickup and return to home base functionality</li>
                 </ul>
             </div>
         </div>
@@ -62,8 +48,8 @@
             <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
                 <!-- Combined Progress Bar -->
                 <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
-                    <!-- C/C++ - 50% -->
-                    <div style="width: 50%; 
+                    <!-- C/C++ - 40% -->
+                    <div style="width: 40%; 
                         height: 100%; 
                         background: linear-gradient(90deg, #6366f1, #818cf8); 
                         display: flex; 
@@ -71,11 +57,11 @@
                         justify-content: center; 
                         color: white; 
                         font-size: 12px; 
-                        font-weight: bold;" title="C/C++ - 50%">50%
+                        font-weight: bold;" title="C/C++ - 40%">40%
                     </div>
 
-                    <!-- FPGA - 35% -->
-                    <div style="width: 35%; 
+                    <!-- Python - 25% -->
+                    <div style="width: 25%; 
                         height: 100%; 
                         background: linear-gradient(90deg, #06b6d4, #22d3ee); 
                         display: flex; 
@@ -83,11 +69,11 @@
                         justify-content: center; 
                         color: white; 
                         font-size: 12px; 
-                        font-weight: bold;" title="FPGA - 35%">35%
+                        font-weight: bold;" title="Python - 25%">25%
                     </div>
                     
-                    <!-- Verilog - 15% -->
-                    <div style="width: 15%; 
+                    <!-- HTML - 10% -->
+                    <div style="width: 10%; 
                         height: 100%; 
                         background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
                         display: flex; 
@@ -95,8 +81,21 @@
                         justify-content: center; 
                         color: white; 
                         font-size: 12px; 
-                        font-weight: bold;" title="Verilog - 15%">15%
+                        font-weight: bold;" title="HTML - 10%">10%
                     </div>
+                    
+                    <!-- Robotics Assembly - 25% -->
+                    <div style="width: 25%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #ec4899, #f472b6); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Robotics Assembly - 25%">25%
+                    </div>
+                    
                 </div>
                 
                 <!-- Legend -->
@@ -107,11 +106,15 @@
                     </div>
                     <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
                         <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">FPGA</span>
+                        <span style="color: var(--color-gray); font-size: 14px;">Python</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
                         <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
-                        <span style="color: var(--color-gray); font-size: 14px;">Verilog</span>
+                        <span style="color: var(--color-gray); font-size: 14px;">HTML</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #ec4899, #f472b6); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Robotics Assembly</span>
                     </div>
                 </div>
             </div>
@@ -121,22 +124,17 @@
         <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
             <div>
                 <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
-                <p>
-                    One of the main challenges was actually getting the animations to play and bounce normally. As the ball went faster and faster, the curvature 
-                    of the ball's trajectory would also have to change as the way the ball path is calculated is based off of normal kinematic equations due to the 
-                    nature of programming for an FPGA as the alternative was to manually key frame every single frame of the ball's movement which would be impractical,
-                    and we could not use kinematics to account for ball spin physics which is what is usually responsible for the trajectories we would normally see
-                    in real life ping pong games.
+                <p>One of the main challenges was figuring out how to tune the motors so it ran as intended, figuring out how to connect and control the robot wirelessly, 
+                    and figuring out how to move the arm for crop gathering dexterity.
+                </p>
+                <p>For instance, the grabber arms needed to close in the same fashion on both sides, otherwise the crop wouldn't be properly gripped and would slip out during the return journey.
+                    However, even if the motors closed the same way, there was the issue of the grabbers themselves not having enough grip to hold onto the crops. To solve this,
+                    we added rubber bands to the grabbers to increase friction and ensure a firm hold on the crops.
                 </p>
                 <p>
-                    This meant we would need to adjust the gravity factory as the game sped up to make the ball appear to be bouncing normally, as well as set bouncing
-                    boundaries to ensure it always looked like the ball was bouncing on the correct side of the table. Part of the reason we wanted to add ray 
-                    traced shadows through linear projection was to further sell the image of the ball bouncing in 3D space while looking at a 2D screen.
-                </p>
-                <p>
-                    One other challenge was also fiddling with the difficulty would cause the ball handling logic to break as different timings depending on the difficulty
-                    would mean we would need to adjust the timings for every new difficulty we added. Instead we opted for a simpler solution of just having the difficulty 
-                    curve ramp be the same across all difficulties, and the only difference would be the number of successful rallies before the CPU would forfeit. 
+                    Lastly another big challenge was latency between what the server would see on the camera and what our user would see on their end. This is just inherently due to bandwidth 
+                    restrictions of our hardware, but we tried to minimize this effect by offering those routines you can preset so that the user doesn't have to rely on constant 
+                    camera feedback to move the rover.
                 </p>
             </div>
         </div>
@@ -161,9 +159,13 @@
         <div style="margin-bottom: var(--spacing-3xl);">
             <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
             <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
-                <a href="https://github.com/LancelotShih/bingpong" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                <a href="https://github.com/leeminze214/Let-us-Farm" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
                     <span style="font-size: 32px;">🐙</span>
                     <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+                <a href="https://devpost.com/software/let-us-farm#updates" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on Devpost">
+                    <span style="font-size: 32px;">🆔</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">Devpost</span>
                 </a>
             </div>
         </div>
