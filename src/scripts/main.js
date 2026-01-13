@@ -30,6 +30,7 @@ class App {
             'project-DataCleanRoom': 'src/views/projectDescriptions/DataCleanRoom.html',
             'project-SolarCar': 'src/views/projectDescriptions/SolarCar.html',
             'project-PrivateTutoring': 'src/views/projectDescriptions/PrivateTutoring.html',
+            'project-HomeServer': 'src/views/projectDescriptions/HomeServer.html',
             // Placeholder routes for other projects (create these files when ready)
             'project-ecommerce': 'src/views/projectDescriptions/ecommerce.html',
             'project-taskmanager': 'src/views/projectDescriptions/taskmanager.html',
