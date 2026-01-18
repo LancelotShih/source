@@ -1,0 +1,153 @@
+<!-- Project Description: AR Maps Navigator -->
+<section class="section" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
+    <div class="container">
+        <!-- Back Button -->
+        <a href="#projects" data-view="projects" class="btn btn-secondary" style="margin-bottom: var(--spacing-2xl);">← Back to Projects</a>
+
+        <!-- Project Header -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">AR Maps Navigator</h1>
+            <p class="section__subtitle">An AR navigation tool that allows for real-time projected guidance through your phone camera to take you from point A to point B.</p>
+        </div>
+
+        <!-- Project Image -->
+        <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
+            <img src="assets\images\ARMapsNavigator\Screenshot_20251219_103330_HelloARCore2.jpg" alt="AR Maps Navigator" style="max-width: 400px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Project Details Grid -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Overview -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
+                <p>This project was meant to be a cool proof of concept of AR based navigation tools that they could be used
+                    as a way of more intuitive navigation as our world infrastructure, especially in cities, becomes more and 
+                    more complex.
+                </p>
+                <p>
+                    It utilizes the ARcore SDK for android to provide your android device with AR feature sets such as environmental position tracking
+                    and plane detection. From there, I can then use the Google Maps API to pull in navigation data for general directional input
+                    and then calculate pathing checkpoints to place on the floor of the AR space to get from source to destination
+                </p>
+                <p>
+                    The pathing checkpoints are determined by segmentation vision models that can identify practical walking surfaces in the camera view
+                    and then place the checkpoints on those surfaces to ensure that the projected path is always walkable.
+                </p>
+
+            </div>
+
+            <!-- Key Features -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md);">✓ WIP</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- C/C++ - 40% -->
+                    <div style="width: 100%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #6366f1, #818cf8); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="C/C++ - 40%">100%
+                    </div>
+                    
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Kotlin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
+                <p>This project is still a work in progress. Challenges will be posted once this project is marked as complete.</p>
+            </div>
+        </div>
+
+        <!-- Project Gallery -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Gallery</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Pathing Testing')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets\images\ARMapsNavigator\Screenshot_20251219_103330_HelloARCore2.jpg" alt="Pathing Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/LancelotShih/android-AR-AstraAtHome" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
+            <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
+                <a href="#projects" data-view="projects" class="btn btn-secondary">View More Projects</a>
+            </div>
+        </div>
+    </div>
+</section>

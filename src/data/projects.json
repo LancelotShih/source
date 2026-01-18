@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce Platform",
+    "category": "web",
+    "description": "A full-stack e-commerce solution built with React and Node.js featuring real-time inventory management and secure payment processing.",
+    "image": "assets/images/image1.png",
+    "tags": ["React", "Node.js", "MongoDB", "Stripe"],
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "title": "Task Management App",
+    "category": "web",
+    "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    "image": "assets/images/image2.png",
+    "tags": ["JavaScript", "Firebase", "CSS3", "Material-UI"],
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "UI Design System",
+    "category": "design",
+    "description": "A comprehensive design system with reusable components, typography guidelines, and color palette for consistent brand experience.",
+    "image": "assets/images/image3.png",
+    "tags": ["Figma", "Design", "UI/UX", "Component Library"],
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": "Fitness Tracker App",
+    "category": "mobile",
+    "description": "Native mobile application for tracking workouts, nutrition, and progress with AI-powered personalized recommendations.",
+    "image": "assets/images/image4.png",
+    "tags": ["React Native", "Firebase", "Machine Learning", "Health API"],
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": "Analytics Dashboard",
+    "category": "web",
+    "description": "Real-time analytics dashboard with interactive charts, data visualization, and customizable reports for business intelligence.",
+    "image": "assets/images/image5.png",
+    "tags": ["Vue.js", "D3.js", "Node.js", "PostgreSQL"],
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "title": "Social Media Platform",
+    "category": "web",
+    "description": "Feature-rich social media platform with user authentication, real-time messaging, and content sharing capabilities.",
+    "image": "assets/images/image6.png",
+    "tags": ["React", "WebSocket", "PostgreSQL", "Redis"],
+    "link": "#"
+  },
+  {
+    "id": 7,
+    "title": "Brand Identity Package",
+    "category": "design",
+    "description": "Complete brand identity design including logo, color palette, typography, and brand guidelines for cohesive visual communication.",
+    "image": "assets/images/image7.png",
+    "tags": ["Branding", "Design", "Illustration", "Adobe Creative Suite"],
+    "link": "#"
+  },
+  {
+    "id": 8,
+    "title": "Weather Forecast App",
+    "category": "mobile",
+    "description": "Mobile weather application with real-time forecasts, geolocation, animated weather graphics, and push notifications.",
+    "image": "assets/images/image1.png",
+    "tags": ["Flutter", "OpenWeather API", "Geolocation", "Push Notifications"],
+    "link": "#"
+  }
+]

@@ -1,0 +1,90 @@
+/* ========================================
+   RESPONSIVE DESIGN STYLES
+   ======================================== */
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-3xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .section {
+        padding: var(--spacing-3xl) var(--spacing-lg);
+    }
+
+    .section__title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .grid--2col,
+    .grid--3col,
+    .grid--projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile (480px and down) */
+@media (max-width: 480px) {
+    body {
+        font-size: var(--font-size-sm);
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    .section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+
+    .section__title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}

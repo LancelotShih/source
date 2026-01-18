@@ -1,0 +1,219 @@
+<!-- Project Description: Farming Rover -->
+<section class="section" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
+    <div class="container">
+        <!-- Back Button -->
+        <a href="#projects" data-view="projects" class="btn btn-secondary" style="margin-bottom: var(--spacing-2xl);">← Back to Projects</a>
+
+        <!-- Project Header -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">Farming Rover</h1>
+            <p class="section__subtitle">A rover designed using various servo and hobby motors and remote controlled using HTTP requests. 
+                Designed to pick up objects via remote control and return to home base after usage.</p>
+        </div>
+
+        <!-- Project Image -->
+        <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
+            <img src="assets/images/FarmingRover/20240121_150454.jpg" alt="Farming Rover" style="max-width: 400px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Project Details Grid -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Overview -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
+                <p>Designed as a part of the UTRA Hacks 2024 Hackathon, the Farming Rover is a remote-controlled vehicle built to assist in agricultural tasks.
+                    The rover is equipped with various servo and hobby motors that allow it to navigate terrain, pick up objects, and return to its home base.
+                </p>
+                <p>
+                    We used an ESP32 microcontroller as a means to handle all motor controls and an RPI as the main HTTP server that was used to receive commands from the user
+                    who would request for the rover to move in either preset routines or manual control via a web interface. There was also a live camera feed that allowed for
+                    the user to see in real time what the rover was seeing.
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md);">✓ Remote control via HTTP requests</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Live camera feed for real-time viewing</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Object pickup and return to home base functionality</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- C/C++ - 40% -->
+                    <div style="width: 40%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #6366f1, #818cf8); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="C/C++ - 40%">40%
+                    </div>
+
+                    <!-- Python - 25% -->
+                    <div style="width: 25%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #06b6d4, #22d3ee); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Python - 25%">25%
+                    </div>
+                    
+                    <!-- HTML - 10% -->
+                    <div style="width: 10%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="HTML - 10%">10%
+                    </div>
+                    
+                    <!-- Robotics Assembly - 25% -->
+                    <div style="width: 25%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #ec4899, #f472b6); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Robotics Assembly - 25%">25%
+                    </div>
+                    
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">C/C++</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Python</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">HTML</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #ec4899, #f472b6); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Robotics Assembly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
+                <p>One of the main challenges was figuring out how to tune the motors so it ran as intended, figuring out how to connect and control the robot wirelessly, 
+                    and figuring out how to move the arm for crop gathering dexterity.
+                </p>
+                <p>For instance, the grabber arms needed to close in the same fashion on both sides, otherwise the crop wouldn't be properly gripped and would slip out during the return journey.
+                    However, even if the motors closed the same way, there was the issue of the grabbers themselves not having enough grip to hold onto the crops. To solve this,
+                    we added rubber bands to the grabbers to increase friction and ensure a firm hold on the crops.
+                </p>
+                <p>
+                    Lastly another big challenge was latency between what the server would see on the camera and what our user would see on their end. This is just inherently due to bandwidth 
+                    restrictions of our hardware, but we tried to minimize this effect by offering those routines you can preset so that the user doesn't have to rely on constant 
+                    camera feedback to move the rover.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Gallery -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Gallery</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Power Testing')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Power Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Board Explosion Aftermath')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Board Explosion Aftermath" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'RTOS Design')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="RTOS Design" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/leeminze214/Let-us-Farm" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+                <a href="https://devpost.com/software/let-us-farm#updates" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on Devpost">
+                    <span style="font-size: 32px;">🆔</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">Devpost</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
+            <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
+                <a href="#projects" data-view="projects" class="btn btn-secondary">View More Projects</a>
+            </div>
+        </div>
+    </div>
+</section>

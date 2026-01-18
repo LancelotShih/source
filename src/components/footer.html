@@ -1,0 +1,59 @@
+<footer class="footer">
+    <div class="footer__container">
+        <div style="margin-bottom: var(--spacing-lg);">
+            <p>&copy; 2025 Lancelot Shih. All rights reserved.</p>
+        </div>
+        
+        <!-- Social Links as Icon Boxes -->
+        <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:shihlancelot@gmail.com" class="social-icon-box" title="Email">
+                <span style="font-size: 24px;">📧</span>
+                <span style="font-size: 12px; font-weight: bold; margin-top: 4px;">Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/lancelot-shih/" target="_blank" rel="noopener noreferrer" class="social-icon-box" title="LinkedIn">
+                <span style="font-size: 24px;">💼</span>
+                <span style="font-size: 12px; font-weight: bold; margin-top: 4px;">LinkedIn</span>
+            </a>
+            <a href="https://github.com/LancelotShih" target="_blank" rel="noopener noreferrer" class="social-icon-box" title="GitHub">
+                <span style="font-size: 24px;">🐙</span>
+                <span style="font-size: 12px; font-weight: bold; margin-top: 4px;">GitHub</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<style>
+.social-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(99, 102, 241, 0.1);
+    border: 2px solid rgba(99, 102, 241, 0.3);
+    border-radius: var(--radius-md);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.social-icon-box:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 480px) {
+    .social-icon-box {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .social-icon-box span:last-child {
+        display: none;
+    }
+}
+</style>

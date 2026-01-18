@@ -1,0 +1,204 @@
+<!-- Project Description: Wake Up Joe -->
+<section class="section" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
+    <div class="container">
+        <!-- Back Button -->
+        <a href="#projects" data-view="projects" class="btn btn-secondary" style="margin-bottom: var(--spacing-2xl);">← Back to Projects</a>
+
+        <!-- Project Header -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">Wake Up Joe</h1>
+            <p class="section__subtitle">An augmented reality voice powered morning routine experinece that assists in helping 
+                        you get dressed, make breakfast, and update you on today's events.</p>
+        </div>
+
+        <!-- Project Image -->
+        <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
+            <img src="assets/images/WakeUpJoe/Screenshot 2024-07-16 205811.png" alt="Wake Up Joe" style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Project Details Grid -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Overview -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
+                <p>
+                    A MakeUofT 2024 Hackathon project with the focus on home automation, we designed and developed "Wake Up Joe", an augmented morning routine 
+                    experience that aimed to leverage the Qualcomm Android SDK to create a voice-powered assistant that helps users get ready for their day.
+                </p>
+                <p>
+                    The routine would essentially begin when the user wakes up and wears their AR device of choice, which pulls up a UI overlay that guides them through 
+                    various morning routine tasks such as selecting an outfit, making breakfast, weather concerns, and getting updates on the day's events.
+                </p>
+                <p>
+                    Among these routines, an open mic in the room would listen for voice commands from the user to interact with the system, such as "Show me today's weather", "Brew me a cup of coffee",
+                    or "What's on my calendar today?". The system would then process these commands and provide relevant responses or actions through the AR interface.
+                </p>
+                <p>
+                    The voice assistant was entirely local, built using Qualcomm's Android SDK using TensorFlow Lite models for speech recognition and natural language processing.
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md);">✓ Voice Controlled Routine</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ AR UI Interface</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Local HTTP Server For Command Processing</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ TensorFlow Lite Voice Processing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- Java - 20% -->
+                    <div style="width: 20%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #6366f1, #818cf8); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Java - 20%">20%
+                    </div>
+
+                    <!-- HTML/CSS - 40% -->
+                    <div style="width: 40%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #06b6d4, #22d3ee); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="HTML/CSS - 40%">40%
+                    </div>
+                    
+                    <!-- TensorFlow Lite - 40% -->
+                    <div style="width: 40%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="TensorFlow Lite - 40%">40%
+                    </div>  
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Java</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">HTML/CSS</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">TensorFlow Lite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
+                <p>One of the main challenges was making sure that the voice recognition worked well enough and could act upon requests well enough so that it was at least
+                    functional within the limited time frame of the hackathon. We had issues where it would misinterpret words, pick up gibberish and try to spell those words out,
+                    and also just missing commands entirely. By speccing a limited set of keywords and phrases that the system would recognize, we were able to improve accuracy significantly.
+                </p>
+                <p>
+                    Another challenge was just getting the voice recognition to work on the Qualcomm SDK in the first place, as the device was fairly new and there was limited documentation available
+                    since it was meant to promote the new Snapdragon NPU unit for on-device AI processing. We had to do a lot of trial and error with different model formats and configurations
+                    before we were able to get a working setup.
+                </p>
+                
+            </div>
+        </div>
+
+        <!-- Project Gallery -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Gallery</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Power Testing')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Power Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'Board Explosion Aftermath')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="Board Explosion Aftermath" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/placeholder.webp', 'RTOS Design')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/placeholder.webp" alt="RTOS Design" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/jdtech3/WakeUpJoe" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
+            <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
+                <a href="#projects" data-view="projects" class="btn btn-secondary">View More Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
