@@ -74,14 +74,20 @@ a:hover {
 .btn {
     display: inline-block;
     padding: var(--spacing-md) var(--spacing-xl);
+    font-family: inherit;
     font-size: var(--font-size-base);
-    font-weight: var(--font-weight-semibold);
+    font-weight: 700;
     border: 2px solid transparent;
     border-radius: var(--radius-lg);
     cursor: pointer;
     transition: all var(--transition-base);
     text-align: center;
     text-decoration: none;
+}
+
+/* Ensure anchor buttons have correct font weight */
+a.btn {
+    font-weight: 700;
 }
 
 .btn:hover {

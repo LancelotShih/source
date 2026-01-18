@@ -48,14 +48,23 @@ class App {
         // Load and render navbar
         await this.loadComponent('#navbar-container', 'src/components/navbar.html');
         
-        // Load and render initial view
-        await this.loadView(this.currentView);
+        // Determine initial view from URL hash
+        const initialView = this.getViewFromHash() || 'home';
+        
+        // Load and render initial view (don't push to history on first load)
+        await this.loadView(initialView, false);
         
         // Load and render footer
         await this.loadComponent('#footer-container', 'src/components/footer.html');
         
         // Setup event listeners
         this.setupEventListeners();
+        
+        // Listen for browser back/forward button
+        window.addEventListener('popstate', (e) => {
+            const view = e.state?.view || this.getViewFromHash() || 'home';
+            this.loadView(view, false);
+        });
         
         // Initialize utilities
         this.initializeObservers();
@@ -78,9 +87,22 @@ class App {
     }
 
     /**
-     * Load and render a view
+     * Get view name from URL hash
      */
-    async loadView(viewName) {
+    getViewFromHash() {
+        const hash = window.location.hash.slice(1); // Remove the '#'
+        if (hash && this.routes[hash]) {
+            return hash;
+        }
+        return null;
+    }
+
+    /**
+     * Load and render a view
+     * @param {string} viewName - The name of the view to load
+     * @param {boolean} pushHistory - Whether to push to browser history (default: true)
+     */
+    async loadView(viewName, pushHistory = true) {
         const filePath = this.routes[viewName];
         if (!filePath) {
             console.error(`View not found: ${viewName}`);
@@ -94,6 +116,12 @@ class App {
             if (mainContent) {
                 mainContent.innerHTML = html;
                 this.currentView = viewName;
+                
+                // Update browser history and URL
+                if (pushHistory) {
+                    const url = viewName === 'home' ? '#' : `#${viewName}`;
+                    history.pushState({ view: viewName }, '', url);
+                }
                 
                 // Trigger view-specific initialization
                 this.initializeView(viewName);
@@ -144,7 +172,7 @@ class App {
             });
         }
 
-        // Navigation links
+        // Navigation links (navbar)
         document.addEventListener('click', (e) => {
             if (e.target.matches('.nav-link')) {
                 e.preventDefault();
@@ -157,15 +185,30 @@ class App {
             }
         });
 
-        // Smooth scroll for anchor links
+        // Handle all view links (buttons and anchors with data-view attribute)
+        // This enables SPA navigation while allowing middle-click to open in new tab
         document.addEventListener('click', (e) => {
-            if (e.target.matches('a[href^="#"]')) {
-                e.preventDefault();
+            const viewLink = e.target.closest('[data-view]');
+            if (viewLink && !e.target.matches('.nav-link')) {
+                // Only intercept left-clicks (not middle-click or ctrl+click)
+                if (e.button === 0 && !e.ctrlKey && !e.metaKey) {
+                    e.preventDefault();
+                    const viewName = viewLink.getAttribute('data-view');
+                    this.loadView(viewName);
+                }
+            }
+        });
+
+        // Smooth scroll for anchor links (only for in-page anchors, not view navigation)
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('a[href^="#"]') && !e.target.hasAttribute('data-view')) {
                 const href = e.target.getAttribute('href');
                 if (href === '#') return;
                 
+                // Check if it's an in-page anchor (element exists on page)
                 const target = document.querySelector(href);
                 if (target) {
+                    e.preventDefault();
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }
