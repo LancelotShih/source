@@ -24,6 +24,7 @@ class App {
             'project-BingPong': 'src/views/projectDescriptions/BingPong.html',
             'project-FarmingRover': 'src/views/projectDescriptions/FarmingRover.html',
             'project-HomeServer': 'src/views/projectDescriptions/HomeServer.html',
+            'project-VisiHelp': 'src/views/projectDescriptions/VisiHelp.html',
             // Under construction placeholder
             'project-underConstruction': 'src/views/projectDescriptions/underConstruction.html',
             // Projects still under construction (update when pages are ready)
