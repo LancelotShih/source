@@ -1,0 +1,237 @@
+<!-- Project Description: VisiHelp -->
+<section class="section" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));">
+    <div class="container">
+        <!-- Back Button -->
+        <a href="#projects" data-view="projects" class="btn btn-secondary" style="margin-bottom: var(--spacing-2xl);">← Back to Projects</a>
+
+        <!-- Project Header -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h1 class="hero__title" style="margin-bottom: var(--spacing-lg);">VisiHelp</h1>
+            <p class="section__subtitle">A wearable system providing comfortable, affordable, and accessible aid for the visually impaired
+                        The device would capture, transcribe, and read aloud text from the environment using a combination of locally hosted web serverices and cloud-based OCR and TTS APIs.
+            </p>
+        </div>
+
+        <!-- Project Image -->
+        <div style="text-align: center; margin-bottom: var(--spacing-3xl);">
+            <img src="assets/images/VisiHelp/IMG_1251.jpg" alt="VisiHelp" style="max-width: 400px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Project Details Grid -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <!-- Overview -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Overview</h2>
+                <p>Designed as a part of the UTEK 2026 Hackathon, the VisiHelp is a wearable system providing comfortable, affordable, and accessible aid for the visually impaired.
+                    The device captures, transcribes, and reads aloud text from the environment using a combination of locally hosted web services and cloud-based OCR and TTS APIs.
+                </p>
+                <p>
+                    We used an ESP32 CAM module as a means to handle all visual capture and would host a web server that would interact with a cloud server to process the image data. 
+                    In the cloud, we used OpenAI's ChatGPT 4.1 Mini API to handle OCR and return a transcribed text version of the image. This text would then be sent to a Google Cloud TTS API backend that 
+                    would convert the text to speech and send back an audio file that would be loaded onto another webserver. This second webserver is then accessed by the user through a mobile device, and 
+                    included the functionalities of operating the camera, capturing images, and playing back the audio files. 
+                </p>
+                <p>
+                    The entire system was designed to be extremely low cost, with the only hardware really required being the ESP32 CAM module, and a custom headband inspired by smartwatch band designs 
+                    to hold the camera module in place. The rest of the system is entirely software based, and can be accessed through any mobile device with internet access.
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div>
+                <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md);">✓ Remote control via HTTP requests</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Live camera feed for real-time viewing</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ AI/ML implementation</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Text-to-speech conversion</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Multi-lingual support</li>
+                    <li style="margin-bottom: var(--spacing-md);">✓ Low cost overhead</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card" style="padding: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Tech Stack</h2>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Combined Progress Bar -->
+                <div style="display: flex; gap: 0; width: 100%; height: 32px; background-color: rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); overflow: hidden;">
+                    <!-- C/C++ - 25% -->
+                    <div style="width: 25%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #6366f1, #818cf8); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="C/C++ - 25%">25%
+                    </div>
+
+                    <!-- Python - 35% -->
+                    <div style="width: 35%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #06b6d4, #22d3ee); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="Python - 35%">35%
+                    </div>
+                    
+                    <!-- HTML - 15% -->
+                    <div style="width: 15%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #8b5cf6, #a78bfa); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="HTML - 15%">15%
+                    </div>
+                    
+                    <!-- AI/ML - 25% -->
+                    <div style="width: 25%; 
+                        height: 100%; 
+                        background: linear-gradient(90deg, #ec4899, #f472b6); 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        color: white; 
+                        font-size: 12px; 
+                        font-weight: bold;" title="AI/ML - 25%">25%
+                    </div>
+                    
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">C/C++</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #06b6d4, #22d3ee); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">Python</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #8b5cf6, #a78bfa); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">HTML/CSS</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 12px; height: 12px; background: linear-gradient(90deg, #ec4899, #f472b6); border-radius: 2px;"></div>
+                        <span style="color: var(--color-gray); font-size: 14px;">AI/ML</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div class="grid grid--2col" style="margin-bottom: var(--spacing-3xl);">
+            <div>
+                <h3 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Challenges</h3>
+                <p>
+                    The first main challenge we faced was getting the camera to actually take good photos. With the camera being manual focus, we needed to have the sensor capture enough data
+                    in the first place for the OCR to work in any capacity. This was eventually resolved through the use of the flash LED to brighten the environment and adjusting some of the various settings 
+                    of the camera in software such as exposure, contrast, and max resolution to get the best possible image quality without sacrificing for slow loading times through file transfers.
+                </p>
+                <p>
+                    The flash LED also posed a small issue as keeping it enabled for extended periods of time would cause the LED to overheat and start smoking. A timer had to be put in place to ensure the LED 
+                    default state was always off, and would trigger outside of the times we needed to take a picture.
+                </p>
+                <p>
+                    The cheap mounting solution was also a challenge as we wanted it to be worn similar to a pair of glasses. There was some experimentation in the beginning on where the camera mounting point 
+                    should be, and whether glasses was an effective solution. In the end, we found that a headband provided a more stable and comfortable fit for longer periods of time. We ended up designing a 
+                    headband out of a single piece of 8x10 in cardboard that would expand and shrink to multiple head sizes. 
+                </p>
+                <p>
+                    It should also be noted this entire project was built within the span of 5 hours. All planning, design, integration, and testing was done within this time, which meant across the 4 of us working
+                    on this project, trust and communication was key to ensure we were all on the same page and working towards the same goal. 
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Gallery -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Gallery</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/VisiHelp/IMG_1251.jpg', 'Device in use')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/VisiHelp/IMG_1251.jpg" alt="Device in use" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/VisiHelp/20260110_222049.jpg', 'ESP32 Camera module')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/VisiHelp/20260110_222049.jpg" alt="ESP32 Camera module" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/VisiHelp/20260111_175207.jpg', 'Headband design')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/VisiHelp/20260111_175207.jpg" alt="Headband design" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="gallery-item" onclick="app.openGalleryModal('assets/images/VisiHelp/image.png', 'System block diagram')" style="cursor: pointer; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition-base), box-shadow var(--transition-base);">
+                    <img src="assets/images/VisiHelp/image.png" alt="System block diagram" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Links as Icon Boxes -->
+        <div style="margin-bottom: var(--spacing-3xl);">
+            <h2 class="section__title" style="font-size: var(--font-size-2xl); text-align: left; padding-bottom: var(--spacing-md);">Project Links</h2>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: flex-start; flex-wrap: wrap;">
+                <a href="https://github.com/LancelotShih/UTEK2026" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">🐙</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">GitHub Repo</span>
+                </a>
+                <a href="https://docs.google.com/presentation/d/1kxGw4Xf6Gg9cvJkSnSobsbCO9rOS96oQ-eui2N-1NbY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link-box" title="View on GitHub">
+                    <span style="font-size: 32px;">📺</span>
+                    <span style="font-size: 13px; font-weight: bold ; margin-top: 8px; text-align: center;">Presentation</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            .project-link-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: var(--color-light);
+                border: 2px solid var(--color-light-dark);
+                border-radius: var(--radius-md);
+                color: var(--color-white);
+                text-decoration: none;
+                transition: all var(--transition-base);
+                cursor: pointer;
+            }
+
+            .project-link-box:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            @media (max-width: 768px) {
+                .project-link-box {
+                    width: 85px;
+                    height: 85px;
+                }
+                
+                .project-link-box span:last-child {
+                    font-size: 11px;
+                }
+            }
+        </style>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: var(--spacing-2xl); background-color: var(--color-light); border-radius: var(--radius-lg);">
+            <h2 class="section__title" style="text-align: center;">Interested in this project?</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Feel free to reach out for more details</p>
+            <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="app.loadView('home'); setTimeout(() => document.querySelector('#contact')?.scrollIntoView({behavior: 'smooth'}), 500)">Contact</button>
+                <a href="#projects" data-view="projects" class="btn btn-secondary">View More Projects</a>
+            </div>
+        </div>
+    </div>
+</section>

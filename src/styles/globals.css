@@ -52,6 +52,21 @@ a:hover {
     color: var(--color-primary);
 }
 
+/* Centering for About Me section */
+.about-me-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-me-center img.about-me {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* Container */
 .container {
     width: 100%;
